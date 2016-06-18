@@ -1,0 +1,120 @@
+#parse("header.vm")
+
+
+<body>
+<link rel="stylesheet" href="css/solution1.css">
+
+<div id="bodyFlowContainer" class="adviser">
+    <div class="title-container">
+        <img class="title-img" src="${req.contextPath}/resources/assistantApply/title-img.png">
+        <div class="row title-content">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <img class="title-icon" src="${req.contextPath}/resources/assistantApply/banner-icon-1.png">
+                <div class="title">专属申请助理</div>
+                <div class="split"></div>
+                <div class="sub-title">UIN的每一位申请助理都具有海外名校背景。</div>
+            </div>
+        </div>
+        <div class="arrow-container">
+            <a class="arrow right" id="arrow-right-action" href="http://ufoffer.com/ufoffer/tutor.do"><div id="arrow-right" style="background-image: url('${req.contextPath}/resources/assistantApply/arrow-right.png'); background-position: 0px 50%;"></div></a>
+            <a class="arrow left" id="arrow-left-action" href="http://ufoffer.com/ufoffer/documentPrepare.do"><div id="arrow-left" style="background-image: url('${req.contextPath}/resources/assistantApply/arrow-left.png'); background-position: 20px 50%;"></div></a>
+        </div>
+    </div>
+    <div class="center  col-lg-10 col-lg-offset-1">
+        <div class="row feature">
+            <div class="col-sm-2 index">
+
+            </div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/assistantApply/1.png">一对一辅助申请一切事务</div>
+                <div class="content">在传统留学机构，一个工作人员平均一年要负责80位学生。</div>
+                <div class="content">而在UIN，我们对效率低下的工作说不！</div>
+                <div class="content">不管是申请助理，还是教师顾问，都是专属于你的。我们只为做好你的申请。</div>
+            </div>
+        </div>
+        <div class="row feature">
+            <div class="col-sm-2 index">
+
+            </div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/assistantApply/2.png">私人全职秘书，建立与顾问的沟通</div>
+                <div class="content">觉得自己英语不行，跟外国教师顾问直接交流有困难？</div>
+                <div class="content">别怕，作为你的私人全职秘书，申请助理会辅助你的一切申请工作，包括跟外国教师的沟通。</div>
+            </div>
+        </div>
+        <div class="row feature">
+            <div class="col-sm-2 index"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/assistantApply/3.png">从申请到毕业，陪伴不止于此</div>
+                <div class="content">我们向每位学生提供真正的整体留学解决方案，不止于申请。</div>
+                <div class="content">依托于UIN的全球名校网络，我们承诺向每位学生提供长达留学全程的免费学业咨询服务。</div>
+            </div>
+        </div>
+
+
+        <div class="row apply">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"> 你的UIN专属申请助理：</div>
+                <div class="split">
+                    <div class="apply-types col-sm-12 nopadding">
+                        <div class="apply-types nopadding">
+                            <div class="col-sm-12 nopadding">
+                                <div class="col-sm-4 adviser">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/assistantApply/Effective.png"></div>
+                                        <div class="part col-sm-6">Effective</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/assistantApply/247.png"></div>
+                                        <div class="part col-sm-6">24/7</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 nopadding">
+                                <div class="col-sm-4">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/assistantApply/Efficient.png"></div>
+                                        <div class="part col-sm-6">Efficient</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/assistantApply/1to1.png"></div>
+                                        <div class="part col-sm-6">1 to 1</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row time-line col-lg-12 nomargin">
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="time-item">
+                    <div class="title">开启留学之路</div>
+                    <div class="content">UIN时刻专注与你一个人的留学体验</div>
+                </div>
+
+                <div class="action-arrow" id="apply-action-bg">
+                    <a id="arrow-bottom-action" href="http://ufoffer.com/ufoffer/tutor.do">
+                        <div id="arrow-bottom" style="background-image: url('${req.contextPath}/resources/assistantApply/arrow-right-bottom.png'); background-position: 0px 50%;"></div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#parse("footer-parts.vm")
+<script type="text/javascript" src="${req.contextPath}/js/solution.js"></script>
+<div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1600</span> x <span class="tooltipHeight" id="winHeight">860</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">677</span> x <span class="tooltipHeight" id="vpHeight">775</span></div></body>
+</html>

@@ -1,0 +1,538 @@
+/**
+ * Created by Alex.W on 2016/3/11.
+ */
+* {
+    font-size: 14px;
+    font-family: "STXihei","Avenir", Arial, "STHeitiSC-Light", "Microsoft YaHei";
+}
+.nopadding {
+    padding-left: 0;
+    padding-right: 0;
+}
+/****introduction****/
+@media screen and (max-width: 1920px) and (min-width: 1024px){
+    .introduction .container {
+        width: 800px;
+    }
+}
+
+.introduction {
+    background-color: #f1f3f3;
+    z-index: 10;
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: 200px 0 130px;
+}
+
+.introduction .title {
+    font-size: 26px;
+    line-height: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.introduction p {
+    color: #CCCCCC;
+    text-align: center;
+    margin-right: 0;
+}
+
+/****main****/
+.main {
+    display: block;
+}
+.main .subTitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.main p {
+    /*line-height: 30px;*/
+}
+.container {
+    margin: 0 auto;
+    vertical-align: baseline;
+    padding-left: 0;
+    padding-right: 0;
+}
+ul {
+    list-style: none;
+}
+.main ul {
+    margin-bottom: 0;
+}
+
+.main .text-column {
+    /*position: absolute;*/
+    top: 50%;
+}
+.main .section1 .text-column {
+    margin-right: 70px;
+}
+@media screen and (min-width: 1025px) {
+    .split-section::before {
+        content: " ";
+        display: block;
+        background: #cbcfcf;
+        width: 2px;
+        height: 100%;
+        position: fixed;
+        left: 50%;
+        top: 0;
+        z-index: 1;
+        margin-left: -1px;
+    }
+    .split-section::after {
+        content: " ";
+        display: block;
+        background: #4b91cf;
+        width: 2px;
+        height: 100%;
+        position: fixed;
+        left: 50%;
+        bottom: 50%;
+        z-index: 1;
+        margin-left: -1px;
+    }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1280px){
+    .section1 .left {
+        padding-top: 175px;
+        padding-bottom: 100px;
+        padding-left: 130px;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1024px){
+    .section1 .left {
+        padding-top: 175px;
+        padding-bottom: 100px;
+        padding-left: 30px;
+        text-align: right;
+    }
+}
+
+.section1 .right {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.section1 p {
+    text-align: right;
+    color: #5d656c;
+    margin-bottom: 8px;
+}
+@media screen and (max-width: 1024px) and (min-width: 640px){
+    .section1 p, .section2 p, .section3 p {
+        text-align: center !important;
+    }
+    .right, .left {
+        margin-top: 40px !important;
+        margin-bottom: 64px !important;
+        padding: 0px !important;
+    }
+    /*.section1 .right, .section2 .left, .section3 .right {*/
+        /*margin-top: 0px !important;*/
+    /*}*/
+    .left img, .right img {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block;
+    }
+}
+
+.section1 .icon {
+    position: absolute;
+    display: inline-block;
+    right: -35px;
+    z-index: 9;
+    transition: width 2s;
+    top: 160px;
+}
+
+.section1 .right img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-left: 125px;
+    opacity: 0.6;
+}
+
+.section2 {
+    background: #f1f3f3;
+}
+/*.section2 .right {*/
+    /*float: right;*/
+    /*padding-top: 175px;*/
+    /*padding-bottom: 100px;*/
+    /*padding-left: 60px;*/
+    /*padding-right: 130px;*/
+/*}*/
+.section2 .right {
+    float: right;
+    padding-top: 175px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.section2 .left {
+    float: left;
+    padding-top: 165px;
+    padding-bottom: 100px;
+}
+.section2 p {
+    text-align: left;
+    color: #5d656c;
+    margin-bottom: 8px;
+}
+.section2 .icon{
+    position: absolute;
+    display: inline-block;
+    left: -35px;
+    z-index: 9;
+    transition: width 2s;
+    top: 160px;
+}
+.section2 .left img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-left: -80px;
+    /*right: 100px;*/
+    opacity: 0.6;
+}
+
+/****bottom****/
+.bottom {
+    background-color: #6092e3;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    z-index: 10;
+    color: white;
+
+}
+.bottom .container {
+    padding: 80px 0 168px;
+    text-align: center;
+    z-index: 10;
+}
+.bottom p {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.bottom li {
+    display: inline-block;
+}
+.bottom .container .btn {
+    margin: 0 25px;
+    width: 200px;
+    border: 2px solid white;
+    color: white;
+}
+
+.bottom .btn a {
+    font-size: 16px;
+}
+
+
+/*****documentMaster*****/
+
+.documentMaster .split-section::after {
+    background: #eb7fbb;
+}
+.consultantPhoto {
+    /*background-color: white;*/
+    z-index: 10;
+    color: black;
+    height: 600px;
+    background-image: url( "http://uinglobal.cn/resources/fiveAdvantages/documentMaster/photo.jpg");
+    background-position: center;
+}
+
+.consultantPhoto .container {
+    padding: 90px 0 100px;
+    text-align: center;
+    z-index: 10;
+}
+
+.consultantPhoto .chi, .consultantPhoto .eng {
+    color: rgba(93,101,108,0.6);
+    margin-bottom: 20px;
+}
+.consultantPhoto .chi {
+    font-size: 32px;
+}
+.consultantPhoto .eng {
+    font-size: 28px;
+}
+.documentMaster .bottom {
+    background-image: url( "http://uinglobal.cn/resources/fiveAdvantages/documentMaster/bottompink.png");
+    background-color: #eb7fbb;
+}
+.documentMaster .section1 .right {
+    padding-top: 175px;
+    padding-bottom: 120px;
+}
+.documentMaster .section1 .right img {
+    width: 392px;
+    height: 257px;
+}
+.documentMaster .section2 .left {
+    padding-top: 111px;
+    padding-bottom: 0px;
+}
+.documentMaster .section2 .right {
+    padding-bottom: 0;
+}
+.documentMaster .section2 .left img {
+    width: 333px;
+    height: 467px;
+    opacity: 0.1;
+    margin-left: 70px;
+}
+@media screen and (max-width: 1280px) and (min-width: 1200px) {
+    .documentMaster .section2 .left img {
+        margin-left: 70px;
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+    .documentMaster .section2 .left img {
+        margin-left: -30px;
+    }
+
+}
+.documentMaster .wordImg {
+    opacity: 0;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1280px) {
+    .documentMaster .section2 .right {
+        /*left: 93px;*/
+    }
+}
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
+    .documentMaster .section2 .right {
+        left: 14px;
+    }
+    .documentMaster .section2 .icon {
+        left: -50px;
+    }
+}
+/*****tutorRecommend*****/
+.tutorRecommend .section1 .right {
+    padding-top: 120px;
+}
+.tutorRecommend .section1 .right img {
+    width: 292px;
+    height: 380px;
+}
+.tutorRecommend .section2 .left {
+    padding-top: 180px;
+}
+@media screen and (max-width: 1920px) and (min-width: 1280px) {
+    .tutorRecommend .section2 .left img {
+        width: 468px;
+        height: 291px;
+        margin-left: -55px;
+    }
+}
+@media screen and (max-width: 1280px) and (min-width: 1200px) {
+    .tutorRecommend .section2 .left img {
+        width: 350px;
+        height: 230px;
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+    .tutorRecommend .section2 .left img {
+        width: 350px;
+        height: 230px;
+        margin-left: -40px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 640px) {
+    .tutorRecommend .section2 .left img {
+        width: 468px;
+        height: 291px;
+    }
+}
+
+.tutorRecommend .bottom {
+    background-image: url( "http://uinglobal.cn/resources/fiveAdvantages/tutorRecommend/bottomblue.png");
+
+}
+/*****guarantee*****/
+.guarantee .split-section::after {
+    background: #f3a253;
+}
+.guarantee .section1 .right {
+    padding-top: 160px;
+}
+.guarantee .section1 .right img {
+    width: 346px;
+    height: 315px;
+}
+.guarantee .section2 .left {
+    padding-top: 145px;
+}
+.guarantee .section2 .left img {
+    width: 440px;
+    height: 324px;
+    margin-left: -20px;
+}
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
+    .guarantee .section2 .left img {
+        width: 380px;
+        height: 290px;
+    }
+}
+@media screen and (max-width: 1280px) and (min-width: 1200px) {
+    .guarantee .section2 .left img {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+    .guarantee .section2 .left img {
+        margin-left: -60px;
+    }
+}
+.guarantee .bottom {
+    background-image: url( "http://uinglobal.cn/resources/fiveAdvantages/guarantee/bottomorange.png");
+
+    background-color: #f3a253;
+}
+
+
+
+/*****privateCustomize*****/
+
+.privateCustomize .split-section::after {
+    background: #b06fdb;
+}
+.privateCustomize .section1 .right {
+    padding-top: 165px;
+}
+.privateCustomize .section1 .right img {
+    width: 374px;
+    height: 324px;
+    margin-left: 120px;
+}
+.privateCustomize .section2 .left img {
+    width: 330px;
+    height: 347px;
+
+    margin-left: 80px;
+}
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+    .privateCustomize .section2 .left img {
+        margin-left: -10px;
+    }
+}
+.privateCustomize .bottom {
+    background-image: url( "http://uinglobal.cn/resources/fiveAdvantages/privateCustomize/bottompu.png");
+
+    background-color: #b06fdb;
+}
+
+
+
+/*****uinHelp*****/
+.uinHelp .main .section3 .text-column {
+    margin-right: 70px;
+}
+
+.uinHelp .main .subTitle {
+    margin-bottom: 40px;
+}
+.uinHelp .section2 .right {
+    padding-left: 90px;
+}
+.uinHelp .section3 .left {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    text-align: right;
+    padding-left: 140px;
+
+
+}
+.uinHelp .section3 .right {
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+.uinHelp .section3 p {
+    margin-bottom: 8px;
+    text-align: right;
+    color: #5d656c;
+}
+.uinHelp .section3 .icon {
+    position: absolute;
+    display: inline-block;
+    right: -35px;
+    z-index: 9;
+    transition: width 2s;
+    top: 140px;
+}
+.uinHelp .section1 .right {
+    padding-top: 120px;
+}
+.uinHelp .section1 .right img {
+    width: 426px;
+    height: 383px;
+}
+@media screen and (max-width: 1280px) and (min-width: 1024px) {
+    .uinHelp .section1 .right img {
+        width: 360px;
+        height: 320px;
+    }
+}
+.uinHelp .section2 .left img {
+    width: 320px;
+    height: 129px;
+
+    margin-left: 85px;
+}
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+    .uinHelp .section2 .left img {
+        margin-left: -15px;
+
+    }
+}
+.uinHelp .section3 .right img {
+    position: relative;
+    width: 234px;
+    height: 273px;
+    margin-left: 130px;
+    opacity: 0.6;
+}
+
+.uinHelp .split-section::after {
+    background: #54c999;
+}
+
+.uinHelp .bottom {
+    background-image: url( "http://uinglobal.cn/resources/fiveAdvantages/uinHelp/bottomgreen.png");
+
+    background-color: #54c999;
+}
+
+/*.uinHelp .section3 .right img {*/
+    /*width: 100%;*/
+    /*height: auto;*/
+/*}*/
+
+@media screen and (max-width: 1024px) and  (min-width: 640px) {
+    .icon {
+        display: none !important;
+    }
+    .left, .right {
+        width: 100% !important;
+    }
+    .text-column {
+        width: 80% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}

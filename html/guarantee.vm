@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alex.W" />
+    <title>全程保障 · 毕业无忧</title>
+    <link rel="stylesheet" type="text/css" href="${req.contextPath}/css/fiveAdvantages.css">
+</head>
+#parse("header.vm")
+<body>
+<div class="guarantee" id="bodyFlowContainer">
+<div class="introduction">
+    <div class="container">
+        <div class="title">全程保障 · 毕业无忧</div>
+        <p>入学，才刚刚是留学的开始。20岁就踏上留学之路的你，有UIN一路相伴。</p>
+        <p>留学期间全程保障，无限支持，让你毕业无忧。  </p>
+    </div>
+</div>
+<div class="main">
+    <ul class="split-section col-xs-12 nopadding">
+        <li class="section1">
+            <div class="container">
+                <div class="left col-xs-6">
+                    <div class="text-column">
+                        <p class="subTitle">留学过渡性课程辅导
+                        <div class="icon">
+                            <img src="${req.contextPath}/resources/fiveAdvantages/guarantee/1g.png">
+                        </div>
+                        </p>
+                        <p>东西方教育方式的转变，</p>
+                        <p>陌生的语言环境，</p>
+                        <p>截然不同的学习思维，</p>
+                        <p>都将造成你喘不过气的压力。</p>
+                        <p>Academic Writing, Presentation, Critical Thinking,</p>
+                        <p>UIN帮你快速适应留学环境。</p>
+                    </div>
+                </div>
+                <div class="right col-xs-6">
+                    <img src="${req.contextPath}/resources/fiveAdvantages/guarantee/book.png">
+                </div>
+            </div>
+        </li>
+        <li class="section2 col-xs-12">
+            <div class="container">
+                <div class="right col-xs-6">
+                    <div class="text-column">
+                        <p class="subTitle">留学期间全程辅导课程
+                        <div class="icon">
+                            <img src="${req.contextPath}/resources/fiveAdvantages/guarantee/2g.png">
+                        </div>
+                        </p>
+                        <p>专业课程学习遇到问题？</p>
+                        <p>考试准备没有头绪？</p>
+                        <p>论文不知道是否合格？</p>
+                        <p>UIN全程留学解决方案，</p>
+                        <p>包含教师顾问留学全程辅导课程，</p>
+                        <p>毕业无忧有保障。</p>
+                    </div>
+                </div>
+                <div class="left col-xs-6">
+                    <img src="${req.contextPath}/resources/fiveAdvantages/guarantee/stationery.png">
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="bottom col-xs-12">
+    <div class="container">
+        <p>现在就开始留学之路</p>
+        <ul class="nopadding">
+            <li>
+                <a class="btn btn-lg" href="http://ufoffer.com/ufoffer/getStudyPlan.do">选校定位</a>
+            </li>
+            <li>
+                <a class="btn btn-lg" href="http://ufoffer.com/ufoffer/consultantQuery.do?country=&academy=&academyLabel=&major=">寻找教师顾问</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+#parse("footer-parts.vm")
+<script type="text/javascript" src="${req.contextPath}/js/guarantee.js"></script>
+</body>

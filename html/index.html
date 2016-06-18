@@ -1,0 +1,725 @@
+#set($index = true)
+#parse("header.vm")
+<html>
+<link rel="stylesheet" href="${req.contextPath}/component/unslider-master/style.css">
+<link rel="stylesheet" href="${req.contextPath}/css/index.css">
+<body>
+<div id="bodyFlowContainer">
+    <div id="top-container-bg"></div>
+    <div id="top-container">
+        <div id="top-menu" class="nopadding">
+            <div class="navbar navbar-default" role="navigation">
+                <div id="navbar-head">
+                    <a class="navbar-brand top-logo"><img src="${req.contextPath}/resources/index/logo/logo.png" width="130"></a>
+                    <a id="simple-menu" class="navbar-toggle" data-toggle="#modalMenu">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                </div>
+            </div>
+            <div id="menu-item-container">
+                <div class="link-container">
+                    #if(${currentUser})
+                        <div id="loginUserContainer">
+
+                            <a class="dropdown-toggle" id="loginUserLabel" href="javascript:toggle('userMenuPanel');">
+                                <img id="loginUserImg" src="${req.contextPath}/resources/index/user-icon.png">${currentUser.username}
+                                <b class="caret"></b></a>
+                            <ul id="userMenuPanel" class="english">
+                                #if(${currentUser.userType} == 2)
+                                    <li><a href="${req.contextPath}/user.do?id=${currentUser.id}">Homepage</a></li>
+                                #end
+                                <li><a href="${req.contextPath}/page/appointment.jsp?menu=appointment">My Appointment</a></li>
+                                #if(${currentUser.userType} == 2)
+                                    <li><a href="${req.contextPath}/page/resume.jsp?menu=resume">My Profile</a></li>
+                                #end
+                                #if(${currentUser.userType} == 1)
+                                    <li><a href="${req.contextPath}/page/wishlist.jsp?menu=wishlist">My Wish List</a></li>
+                                #end
+                                <li><a href="${req.contextPath}/page/settings.jsp?menu=settings">My Settings</a></li>
+                                #if(${currentUser.userType} == 1)
+                                    <li><a href="${req.contextPath}/page/application.jsp?menu=application">My Application</a></li>
+                                #end
+                                #if(${currentUser.userType} == 3)
+                                    <li class="divider"></li>
+                                    <li><a href="${req.contextPath}/academyController.do?method=query">Academy Manage</a></li>
+                                    <li><a href="${req.contextPath}/specialtyController.do?method=query">Specialty Manage</a></li>
+                                    <li><a href="${req.contextPath}/page/appointmentManage.jsp?menu=appointment">Appointment Manage</a></li>
+                                    <li><a href="${req.contextPath}/userController.do?method=query">User Manage</a></li>
+                                    <li><a href="${req.contextPath}/page/positionStrategyManage.jsp?menu=position">PositionStrategy Manage</a></li>
+                                #end
+                                <li class="divider"></li>
+                                <li><a href="${req.contextPath}/logout.do">Log out</a></li>
+                            </ul>
+                        </div>
+                    #else
+                        <a onclick="__showLoginContainerPanel()"><div class="chinese signOrRegister">登<span style="padding-left: 8px"></span>录</div></a>
+                        <a onclick="__showRegistContainerPanel()"><div class="chinese signOrRegister">注<span style="padding-left: 8px"></span>册</div></a>
+                        <div class="split"></div>
+                        <a onclick="__showLoginContainerPanel()"><div class="english signOrRegister">Log<span style="padding-left: 8px"></span>in</div></a>
+                        <a onclick="__showRegistContainerPanel()"><div class="english signOrRegister">Sign<span style="padding-left: 8px"></span>up</div></a>
+                    #end
+                </div>
+                <a class="redBtn" href="${req.contextPath}/consultantIntroduce.do"><span>Become a consultant</span></a>
+
+                <a class="menu-item">学习辅导</a>
+
+                <a class="menu-item">申请追踪</a>
+
+                <a class="menu-item">名校顾问</a>
+
+                <a class="menu-item active" id="menu-item-plan">定制留学方案</a>
+
+                <a class="top-logo"><img src="${req.contextPath}/resources/index/logo/logo.png" width="130"></a>
+            </div>
+        </div>
+    </div>
+    <div id="banner-top-title"><img src="${req.contextPath}/resources/index/banner/banner-top-title.png"></div>
+    <div id="banner-container">
+        <div class="banner">
+            <ul>
+                <li>
+                    <div class="banner-item">
+                        <img src="${req.contextPath}/resources/index/banner/banner_01.jpg">
+                        <div class="banner-item-intro-container">
+                            <div class="banner-item-intro">
+                                <div class="head-img">
+                                    <img src="${req.contextPath}/resources/index/banner/headmessage1.png">
+                                </div>
+                                <div class="head-personal">
+                                    <div class="head-name">Emre</div>
+                                    <div class="head-work"><span>就职</span> 伦敦国王学院</div>
+                                    <div class="head-work-en english">King's College London</div>
+                                    <div class="head-major">信息科学系</div>
+                                    <div class="head-major-en english">Department of Informatics</div>
+                                    <div class="need-help">问你<span> 是否需要申请帮助</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="banner-item"><img src="${req.contextPath}/resources/index/banner/banner_02.jpg">
+                        <div class="banner-item-intro-container">
+                            <div class="banner-item-intro">
+                                <div class="head-img">
+                                    <img src="${req.contextPath}/resources/index/banner/headmessage2.png">
+                                </div>
+                                <div class="head-personal">
+                                    <div class="head-name">Michael Cashmore</div>
+                                    <div class="head-work"><span>就职</span> 伦敦国王学院</div>
+                                    <div class="head-work-en">King's College London</div>
+                                    <div class="head-major">信息科学系</div>
+                                    <div class="head-major-en">Department of Informatics</div>
+                                    <div class="need-help">问你<span> 是否需要申请帮助</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="banner-item"><img src="${req.contextPath}/resources/index/banner/banner_03.jpg">
+                        <div class="banner-item-intro-container">
+                            <div class="banner-item-intro">
+                                <div class="head-img">
+                                    <img src="${req.contextPath}/resources/index/banner/headmessage3.png">
+                                </div>
+                                <div class="head-personal">
+                                    <div class="head-name">Aylin Nuhoglu Savas</div>
+                                    <div class="head-work"><span>就职</span> 伦敦大学学院</div>
+                                    <div class="head-work-en">University College London</div>
+                                    <div class="head-major">生物医药工程系</div>
+                                    <div class="head-major-en">Biomedical Eng</div>
+                                    <div class="need-help">问你<span> 是否需要申请帮助</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+
+        </div>
+        <div class="banner-control">
+            <a href="javascript:;" class="unslider-arrow prev glyphicon glyphicon-menu-left"></a>
+            <a href="javascript:;" class="unslider-arrow next glyphicon glyphicon-menu-right"></a>
+        </div>
+        <div id="banner-bottom-container">
+            <div class="row  nopadding" id="banner-bottom">
+                <form id="find-consultant-form" action="${req.contextPath}/consultantQuery.do" method="get">
+                    <!--<div class="col-md-2 col-lg-3"></div>-->
+                    <div style="text-align: center; display: inline-block; " class="query">
+                        <div id="query-country" class="consultant-query consultant-query-option"><span id="query-country-label">想去的国家是？</span><span class="glyphicon glyphicon-menu-down consultant-query-down"></span>
+                            <input type="hidden" name="country" id="query-country-input"/>
+                            <div id="query-country-container">
+                                <a href="javascript:;" actionValue="6">不确定</a>
+                                <a href="javascript:;" actionValue="1">美国</a>
+                                <a href="javascript:;" actionValue="2">英国</a>
+                                <a href="javascript:;" actionValue="3">加拿大</a>
+                                <a href="javascript:;" actionValue="4">香港</a>
+                                <a href="javascript:;" actionValue="5">澳大利亚</a>
+                                <p class="hint"><span style="color: #ed4a48">*</span>点击"寻找顾问"查看更多,或先"获得留学方案"</p>
+                            </div>
+                        </div>
+                        <div id="query-university" class="consultant-query consultant-query-option"><span id="query-university-label">想去的学校是？</span><span class="glyphicon glyphicon-menu-down consultant-query-down"></span>
+                            <input type="hidden" name="academy" id="query-academy-input"/>
+                            <input type="hidden" name="academyLabel" id="query-academyLabel-input"/>
+                            <div id="query-university-container">
+                                <div id="query-university-container-6" class="query-university-country-container"></div>
+                                <div id="query-university-container-1" class="query-university-country-container"></div>
+                                <div id="query-university-container-2" class="query-university-country-container"></div>
+                                <div id="query-university-container-3" class="query-university-country-container"></div>
+                                <div id="query-university-container-4" class="query-university-country-container"></div>
+                                <div id="query-university-container-5" class="query-university-country-container"></div>
+                                #*<a href="javascript:;">不确定</a>
+                                <a href="javascript:;">伦敦大学学院</a>
+                                <a href="javascript:;">牛津大学</a>
+                                <a href="javascript:;">伦敦国王学院</a>
+                                <a href="javascript:;">剑桥大学</a>
+                                <a href="javascript:;">帝国理工学院</a>*#
+                                <div style="clear: both">
+                                    <p class="hint"><span style="color: #f9605c">*</span>点击"寻找顾问"查看更多,或先"获得留学方案"</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="query-major" class="consultant-query consultant-query-option"><span id="query-major-label">想学的专业是？</span><span class="glyphicon glyphicon-menu-down consultant-query-down"></span>
+                            <input type="hidden" name="major" id="query-major-input"/>
+                            <div id="query-major-container">
+                                <a href="javascript:;" actionValue="11">不确定</a>
+                                <a href="javascript:;" actionValue="1">经济金融</a>
+                                <a href="javascript:;" actionValue="2">商科</a>
+                                <a href="javascript:;" actionValue="3">工科</a>
+                                <a href="javascript:;" actionValue="4">社会科学</a>
+                                <a href="javascript:;" actionValue="5">自然科学</a>
+                                <a href="javascript:;" actionValue="6">医药学</a>
+                                <a href="javascript:;" actionValue="7">人文学</a>
+                                <a href="javascript:;" actionValue="8">艺术</a>
+                                <a href="javascript:;" actionValue="10">法律</a>
+                                <a href="javascript:;" actionValue="9">建筑学</a>
+                                <p class="hint"><span style="color: #f9605c">*</span>点击"寻找顾问"查看更多,或先"获得留学方案"</p>
+                            </div>
+                        </div>
+                        <div class="consultant-query consultant-query-btn" onclick="findConsultant()">寻找顾问</div>
+                        <div class="position-btn" onclick="getStudyPlan()">获得留学方案</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    #*<div class="container-fluid" id="feature-top-bg">
+        <div class="row">
+            <div class="col-md-1 col-lg-2"></div>
+            <div class="col-md-10 col-lg-8 row feature-top-container nopadding">
+                <div class="col-md-3 col-lg-3">
+                    <div class="feature-top">
+                        <img src="${req.contextPath}/resources/index/feature/feature_1.jpg" width="50">
+                        <div class="title">懂你专业</div>
+                        <div class="subtitle">名校老师帮你写文书</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="feature-top">
+                        <img src="${req.contextPath}/resources/index/feature/feature_2.jpg" width="50">
+                        <div class="title">极速申请</div>
+                        <div class="subtitle">2周完成全部申请</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="feature-top">
+                        <img src="${req.contextPath}/resources/index/feature/feature_3.jpg" width="50">
+                        <div class="title">高性价比</div>
+                        <div class="subtitle">拿到offer后付全款</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="feature-top">
+                        <img src="${req.contextPath}/resources/index/feature/feature_4.jpg" width="50">
+                        <div class="title">实时反馈</div>
+                        <div class="subtitle">微信实时反馈申请进度</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="ufoffer-help-bg" >
+        <div class="row">
+            <div class="col-md-1 col-lg-2"></div>
+            <div class="col-md-10 col-lg-8 row nopadding">
+                <div class="col-md-12 col-lg-12" id="ufoffer-help-header">
+                    <div class="hidden-xs" id="help-how-logo" style="background-color: #fe585a"><img src="${req.contextPath}/resources/index/help/help_how.png"></div>
+                    <div id="help-how-content">
+                        <div class="title">UFOffer怎么帮你</div>
+                        <div class="content">全球数十所名校顾问,为你提供细致周到的申请服务,帮你拿到梦想的offer。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-lg-2"></div>
+            <div class="col-md-10 col-lg-8 row nopadding">
+                <div class="col-md-2 col-lg-2 hidden-xs" id="ufoffer-help-title">
+                    <div class="provide">WE PROVIDE</div>
+                    <div class="provide">HIGH-QUALITY</div>
+                    <div class="services">SERVICES</div>
+                </div>
+                <div class="col-md-10 col-lg-10 row" id="ufoffer-help-container">
+                    <div class="col-xs-6 col-md-3 col-lg-3 ufoffer-help first">
+                        <img src="${req.contextPath}/resources/index/help/help_1.png" width="66" height="66">
+                        <div class="title">30秒快速定位</div>
+                        <div class="subtitle">基于大数据系统,给你最精确的定位,最佳策略申请到世界名校</div>
+                    </div>
+                    <div class="col-xs-6 col-md-3 col-lg-3 ufoffer-help second">
+                        <img src="${req.contextPath}/resources/index/help/help_2.png" width="66" height="66">
+                        <div class="title">选择预约顾问</div>
+                        <div class="subtitle">选择与你专业相同,就职于世界名校的教授或留学生顾问帮你申请</div>
+                    </div>
+                    <div class="col-xs-6 col-md-3 col-lg-3 ufoffer-help third">
+                        <img src="${req.contextPath}/resources/index/help/help_3.png" width="66" height="66">
+                        <div class="title">极速申请</div>
+                        <div class="subtitle">2周完成全部申请，申请进度微信实时反馈，拿到offer后再付全款呦</div>
+                    </div>
+                    <div class="col-xs-6 col-md-3 col-lg-3 ufoffer-help fourth">
+                        <img src="${req.contextPath}/resources/index/help/help_4.png" width="66" height="66">
+                        <div class="title">后续可靠保障</div>
+                        <div class="subtitle">Essay不会写？房子不知道怎么租？留学期间我们一直给你保驾护航！</div>
+                    </div>
+                    <div class="hidden-xs" id="ufoffer-help-more" style="">READ MORE</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="university-bg">
+        <div class="row" id="university-top-content">
+            <div class="col-md-1 col-lg-2"></div>
+            <div class="col-md-10 col-lg-8 row nopadding">
+                <div class="col-md-12 col-lg-12" id="">
+                    <div class="title">THE UNIVERSITY</div>
+                    <div class="subtitle">热门名校</div>
+                    <div class="content">你与名校，仅仅只有一步之遥。</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-lg-2"></div>
+            <div class="col-md-10 col-lg-8 row nopadding" id="university-list">
+                #foreach( $academy in $academyList)
+                    <!--<div class="col-md-4 col-lg-4">
+                        <div class="university-container">
+                            <img src="${cnd_path}/${academy.picUrl}" width="100%">
+                        </div>
+                        <div class="title">${academy.chineseName}</div>
+                    </div>   -->
+                #end
+                <div class="col-md-4 col-lg-4">
+                    <div class="university-container">
+                        <img src="${req.contextPath}/resources/index/academy_2.jpg" width="100%">
+                    </div>
+                    <div class="title">伦敦大学学院</div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="university-container">
+                        <img src="${req.contextPath}/resources/index/academy_3.jpg" width="100%">
+                    </div>
+                    <div class="title">帝国理工学院</div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="university-container">
+                        <img src="${req.contextPath}/resources/index/academy_4.jpg" width="100%">
+                    </div>
+                    <div class="title">伦敦国王学院</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="team-bg">
+        <div class="row" id="team-top-content">
+            <div class="col-md-1 col-lg-2"></div>
+            <div class="col-md-10 col-lg-8 row nopadding">
+                <div class="col-md-12 col-lg-12" id="">
+                    <div class="title">AND THE TEAM</div>
+                    <div class="subtitle">申请达人</div>
+                    <div class="content">你，也可以像我一样。让我来帮你实现梦想。</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-lg-2"></div>
+            <div class="col-md-10 col-lg-8 row nopadding" id="team-list">
+                #foreach( $consultant in $consultantList)
+                    <!--<div class="col-md-3 col-lg-3">
+                        <div class="university-container">
+                            <img src="${cnd_path}/${consultant.indexIconUrl}" width="100%">
+                        </div>
+                        <div class="introduce">
+                            <div>
+                                <span class="name">${consultant.firstName}</span>/<span class="major">${consultant.subject}</span>
+                            </div>
+                            <div class="academy">${consultant.university}</div>
+                        </div>
+                    </div>    -->
+                #end
+                <div class="col-md-3 col-lg-3">
+                    <div class="university-container">
+                        <img src="${req.contextPath}/resources/index/consultant_1.jpg" width="100%">
+                    </div>
+                    <div class="introduce">
+                        <div>
+                            <span class="name">Han</span>/<span class="major">Management & Marketing</span>
+                        </div>
+                        <div class="academy">伦敦大学学院</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="university-container">
+                        <img src="${req.contextPath}/resources/index/consultant_2.jpg" width="100%">
+                    </div>
+                    <div class="introduce">
+                        <div>
+                            <span class="name">Emre</span>/<span class="major">Department Of Informatices</span>
+                        </div>
+                        <div class="academy">伦敦国王学院</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="university-container">
+                        <img src="${req.contextPath}/resources/index/consultant_3.jpg" width="100%">
+                    </div>
+                    <div class="introduce">
+                        <div>
+                            <span class="name">Heng</span>/<span class="major">Material Science</span>
+                        </div>
+                        <div class="academy">帝国理工学院</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="university-container">
+                        <img src="${req.contextPath}/resources/index/consultant_4.jpg" width="100%">
+                    </div>
+                    <div class="introduce">
+                        <div>
+                            <span class="name">Aylin</span>/<span class="major">Biomedical Engineering</span>
+                        </div>
+                        <div class="academy">伦敦大学</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="represent-header"></div>
+    <div class="container-fluid" id="represent-bg">
+        <div class="row">
+            <div class="col-md-1 col-lg-2"></div>
+            <div class="col-md-10 col-lg-8 row nopadding" id="represent-list">
+                <div class="col-md-3 col-lg-3">
+                    <div class="title">我为UFOffer代言</div>
+                    <div class="content">留学大事儿，为自己负责，就是这么任性！</div>
+                </div>
+                #foreach( $academy in $academyList)
+
+                #end
+                <div class="col-md-3 col-lg-3">
+                    <div class="represent-container">
+                        <img src="${req.contextPath}/resources/index/represent_01.jpg" width="100%">
+                    </div>
+                    <div class="introduce">
+                        <div class="appointment">
+                            <div class="student">NRNR</div>
+                            <div class="consultant">预约了Dom?Drounet</div>
+                            <div class="academy-major">(伦敦国王学院 , 商科)</div>
+                        </div>
+                        <div class="clear-both"></div>
+                        <div class="comment">没想到居然让我写评价嘿嘿，不过确实很感谢UFOffer。帝国理工一直是我的dream school，真的没想到居然可以找到帝国理工商学院的老师给我写文书申请...</div>
+                        <div class="comment-all">
+                            <a href="javascript:;"><img src="${req.contextPath}/resources/index/arrow.png"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="represent-container">
+                        <img src="${req.contextPath}/resources/index/represent_02.jpg" width="100%">
+                    </div>
+                    <div class="introduce">
+                        <div class="appointment">
+                            <div class="student">Sky Zhou</div>
+                            <div class="consultant">预约了Trevor?Storey</div>
+                            <div class="academy-major">(牛津大学 , 商科)</div>
+                        </div>
+                        <div class="clear-both"></div>
+                        <div class="comment">UFOffer是我本科同学推荐给我的，刚一上来的时候就觉得网站特别好看，服务也很好。我觉得留学生最关心的就是申请了，我跑了几家中介之后他们给我的定位都很低，当时真的特别绝望。家长一直想让我上个好点的世界名校，你懂得。后来在UFOffer客服人员的帮助下，帮我匹配到了帝国理工商学院的老师Trevor。文书不光特别专业，而且还帮我推荐给了华威商学院。早知道大学好好学习，直接给我推到帝国商学院就好啦哈哈...</div>
+                        <div class="comment-all">
+                            <a href="javascript:;"><img src="${req.contextPath}/resources/index/arrow.png"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="represent-container">
+                        <img src="${req.contextPath}/resources/index/represent_03.jpg" width="100%">
+                    </div>
+                    <div class="introduce">
+                        <div class="appointment">
+                            <div class="student">MiYue</div>
+                            <div class="consultant">预约了Tracy Risby</div>
+                            <div class="academy-major">(康奈尔大学 , 商科)</div>
+                        </div>
+                        <div class="clear-both"></div>
+                        <div class="comment">Ms. Risby 真的特别专业~作为纽约大学商学院的老师，她能帮助我的申请我现在还觉得有点不可思议，一开始我还不相信。我签约了之后，UFOffer的工作人员组织了我和Ms.Risby的skype对话，我有听不懂的地方他们还在旁边辅助。然后所有的申请材料Ms.Risby都有帮我修改，申请率肯定大大的！其实我成绩很渣啦，我同学都说我申请纽约大学这种名校没戏，尤其是我们学校还不是211。总之就好像做梦一样，真的谢谢Ms.Risby和UFOffer：）...</div>
+                        <div class="comment-all">
+                            <a href="javascript:;"><img src="${req.contextPath}/resources/index/arrow.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*#
+
+    <div class="container-fluid nopadding" id="solutionTopContainer">
+        <div class="row">
+            <div class="col-md-12" id="solutionContainer-top">
+                <div class="chinese">整体留学解决方案</div>
+                <div class="english">Education Solution</div>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="row nopadding" id="solutionContainer">
+                        <div class="solutionContainer1t3" style="text-align: center; margin-left: 60px">
+                            <div class="solutionContainer-part">
+                                <div class="solution-block" id="studyPlan">
+                                    <div class="img-index">
+                                        <span>.01</span>
+                                        <img src="${req.contextPath}/resources/index/solution/0.5.png">
+                                    </div>
+                                    <img class="img" src="${req.contextPath}/resources/index/solution/1.gif">
+                                    <div class="title">定制留学方案</div>
+                                    <div class="subtitle">选校从零开始，留学从此开始</div>
+                                    <ul class="list">
+                                        <li>上万份申请数据分析，只做明智选择</li>
+                                        <li>自由个性选校，我们捍卫你的喜好</li>
+                                        <li>名校内部教师做你的独家申请智库</li>
+                                    </ul>
+                                    <div class="bg-img" style="background-image: url('${req.contextPath}/resources/index/solution/1.jpg')">
+                                    </div>
+                                    <div class="solutionContainer-border">
+                                        <img class="arrow" src="${req.contextPath}/resources/index/solution/arrow.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="solutionContainer-part">
+                                <div class="solution-block" id="consultantBooking">
+                                    <div class="img-index">
+                                        <span>.02</span>
+                                        <img src="${req.contextPath}/resources/index/solution/0.5.png">
+                                    </div>
+                                    <img class="img" src="${req.contextPath}/resources/index/solution/2.gif">
+                                    <div class="title">预约内部顾问</div>
+                                    <div class="subtitle">名校申请，‘ 有人 ’ 很重要</div>
+                                    <ul class="list">
+                                        <li>常春藤名校现/前招生官</li>
+                                        <li>Dream School 院系录取委员会成员</li>
+                                        <li>与你同专业的资深教职人士</li>
+                                    </ul>
+                                    <div class="bg-img" style="background-image: url('${req.contextPath}/resources/index/solution/2.jpg')">
+                                    </div>
+                                    <div class="solutionContainer-border">
+                                        <img class="arrow" src="${req.contextPath}/resources/index/solution/arrow.png">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="solutionContainer-part">
+                                <div class="solution-block" id="backgroundImproving">
+                                    <div class="img-index">
+                                        <span>.03</span>
+                                        <img src="${req.contextPath}/resources/index/solution/0.5.png">
+                                    </div>
+                                    <img class="img" src="${req.contextPath}/resources/index/solution/3.gif">
+                                    <div class="title">有效背景提升</div>
+                                    <div class="subtitle">让你成为名校苦苦找寻的那个人</div>
+                                    ##                        <div class="subtitle">世界知名NGO项目</div>
+                                    <ul class="list">
+                                        <li>外国教授的学术研讨会，和精英在一起</li>
+                                        <li>500强的Trainee实习，认识不一样的人</li>
+                                        <li>世界NGO项目，做改变世界的事 </li>
+                                    </ul>
+                                    <div class="bg-img" style="background-image: url('${req.contextPath}/resources/index/solution/3.jpg')">
+                                    </div>
+                                    <div class="solutionContainer-border">
+                                        <img class="arrow" src="${req.contextPath}/resources/index/solution/arrow.png">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="solutionContainer4t6" style="text-align: center; margin-left: 60px">
+                            <div class="solutionContainer-part">
+                                <div class="solution-block" id="documentPrepare">
+                                    <div class="img-index">
+                                        <span>.04</span>
+                                        <img src="${req.contextPath}/resources/index/solution/0.5.png">
+                                    </div>
+                                    <img class="img" src="${req.contextPath}/resources/index/solution/4.gif">
+                                    <div class="title">撰写极致文书</div>
+                                    <div class="subtitle">极致，就是打动招生老师的那一刻</div>
+                                    <ul class="list">
+                                        <li>Native语言，文法错误 ‘零’ 容忍</li>
+                                        <li>名校同专业内部教师为你撰书点睛</li>
+                                        <li>历史传承的工匠精神，字句必究</li>
+                                    </ul>
+                                    <div class="bg-img" style="background-image: url('${req.contextPath}/resources/index/solution/4.jpg')">
+                                    </div>
+                                    <div class="solutionContainer-border">
+                                        <img class="arrow" src="${req.contextPath}/resources/index/solution/arrow.png">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="solutionContainer-part">
+                                <div class="solution-block" id="assistantApply">
+                                    <div class="img-index">
+                                        <span>.05</span>
+                                        <img src="${req.contextPath}/resources/index/solution/0.5.png">
+                                    </div>
+                                    <img class="img" src="${req.contextPath}/resources/index/solution/5.gif">
+                                    <div class="title">专属申请助理</div>
+                                    <div class="subtitle">梦想不易，有我全程陪你</div>
+                                    <ul class="list">
+                                        <li>一对一辅助申请的一切事务</li>
+                                        ##                            <li>事无巨细，一对一辅助你的申请</li>
+                                        <li>私人全职秘书，建立与顾问的沟通</li>
+                                        <li>不止于申请，解决问题直至毕业</li>
+                                        ##                            <li>从申请到毕业，无限支持</li>
+                                    </ul>
+                                    <div class="bg-img" style="background-image: url('${req.contextPath}/resources/index/solution/5.jpg')">
+                                    </div>
+                                    <div class="solutionContainer-border">
+                                        <img class="arrow" src="${req.contextPath}/resources/index/solution/arrow.png">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="solutionContainer-part">
+                                <div class="solution-block" id="tutor">
+                                    <div class="img-index">
+                                        <span>.06</span>
+                                        <img src="${req.contextPath}/resources/index/solution/0.5.png">
+                                    </div>
+                                    <img class="img" src="${req.contextPath}/resources/index/solution/6.gif">
+                                    <div class="title">全程教师辅导</div>
+                                    <div class="subtitle">毕业有保障，爸妈才安心</div>
+                                    <ul class="list">
+                                        <li>过渡性课程，语言课和入学名校的“双保障”</li>
+                                        <li>留学期间全程授课，"一网打尽"你的所有课程</li>
+                                        <li>Essay，考试，毕业，你有名校老师做后盾</li>
+                                    </ul>
+                                    <div class="bg-img" style="background-image: url('${req.contextPath}/resources/index/solution/6.jpg')">
+                                    </div>
+                                    <div class="solutionContainer-border">
+                                        <img class="arrow" src="${req.contextPath}/resources/index/solution/arrow.png">
+                                    </div>
+                                </div>
+
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="connectInfo">
+        <div class="col-sm-12">
+            <div class="position-btn" onclick="getStudyPlan()">我的留学方案</div>
+        </div>
+        <div class="col-sm-12 weOffer">
+            <img src="${req.contextPath}/resources/index/weOffer.png">
+        </div>
+    </div>
+    <div class="row">
+        <div class="advantage-container" id="documentMaster">
+            <div class="img-container">
+                <img src="${req.contextPath}/resources/index/advantage/1.png" />
+            </div>
+            <div class="desc right">
+                <div class="title pink">别具匠心的极致文书</div>
+                <div class="content">百名世界顶级名校教师逐句打造，</div>
+                <div class="content">文法书写错误 ‘零’ 容忍，</div>
+                <div class="content">学者用知识深度展现你的精英潜质。</div>
+                <div class="content">传承自1799年的大不列颠学术精神，</div>
+                <div class="content">不为虚夸，只为打动招生官的瞬间。</div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="advantage-container" id="tutorRecommend">
+            <div class="img-container right">
+                <img src="${req.contextPath}/resources/index/advantage/2.png" />
+            </div>
+            <div class="desc left">
+                <div class="title blue">外国教授的重量级推荐信</div>
+                <div class="content right">顶级学术研讨会,</div>
+                <div class="content right">帮你一对一构建与名校教师的私人联系，</div>
+                <div class="content right">2015年度，超过40%的UIN学生被推荐入学。</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="advantage-container" id="uinHelp">
+            <div class="img-container">
+                <img src="${req.contextPath}/resources/index/advantage/3.png" />
+            </div>
+            <div class="desc right">
+                <div class="title green">专注进入名校的背景养成计划</div>
+                <div class="content">进入世界500强企业实习，</div>
+                <div class="content">参加国际NGO项目,</div>
+                <div class="content">顶级名校不会止于衡量GPA，</div>
+                <div class="content">能力和经历才是决定胜败的最终一环。</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="advantage-container" id="guarantee">
+            <div class="img-container right">
+                <img src="${req.contextPath}/resources/index/advantage/4.png" />
+            </div>
+            <div class="desc left">
+                <div class="title yellow">留学双重保障，全学科无限支持</div>
+                <div class="content right">从入学到毕业，全程双重保障，</div>
+                <div class="content right">为每个学生定制全学科辅导计划。</div>
+                <div class="content right">安全过渡西方学术型思维，</div>
+                <div class="content right">考试，实验，报告，论文等等，</div>
+                <div class="content right">名校教师只为你保驾护航。</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="advantage-container" id="privateCustomize">
+            <div class="img-container">
+                <img src="${req.contextPath}/resources/index/advantage/5.png" />
+            </div>
+            <div class="desc right">
+                <div class="title purple">私人定制留学札记</div>
+                <div class="content">从决定留学的一瞬间，</div>
+                <div class="content">到完美蜕变的那一刻，</div>
+                <div class="content">UIN采用世界领先云端服务技术，</div>
+                <div class="content">记录属于你的不平凡，</div>
+                <div class="content">青春，毕竟终身难忘。</div>
+            </div>
+        </div>
+    </div>
+    <div class="joinUIN">
+        <div class="joinBtn" onclick="getStudyPlan()">加入UIN，开始名校申请</div>
+    </div>
+</div>
+
+
+
+</body>
+#parse("footer.vm")
+<script type="text/javascript" src="${req.contextPath}/component/unslider-master/unslider.js"></script>
+<script type="text/javascript" src="${req.contextPath}/js/index.js"></script>
+</html>

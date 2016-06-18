@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alex.W" />
+    <title>名校教师 · 推荐入学</title>
+    <link rel="stylesheet" type="text/css" href="${req.contextPath}/css/fiveAdvantages.css">
+</head>
+#parse("header.vm")
+<body>
+<div class="tutorRecommend" id="bodyFlowContainer">
+    <div class="introduction">
+        <div class="container">
+            <div class="title">名校教师 · 推荐入学</div>
+            <p>申请名校，想要在数万份申请材料中脱颖而出？在UIN，每一位申请者都会获得名校教职人
+                员的特别关注。UIN独有的推荐通道，当然令你一马当先。</p>
+        </div>
+    </div>
+    <div class="main">
+        <ul class="split-section col-xs-12 nopadding">
+            <li class="section1">
+                <div class="container">
+                    <div class="left col-xs-6">
+                        <div class="text-column">
+                            <p class="subTitle">UIN名校教师顾问的职责
+                                <div class="icon">
+                                    <img src="${req.contextPath}/resources/fiveAdvantages/tutorRecommend/1g.png">
+                                </div>
+                            </p>
+                            <p>数量众多就职于世界顶级名校，同时在UIN注册成为顾问</p>
+                            <p>的高等教育机构教职人员都肩负着为所在高校、院系及教</p>
+                            <p>育科研机构在全世界范围内招收优秀学生及人才的重任。</p>
+                        </div>
+                    </div>
+                    <div class="right col-xs-6">
+                        <img src="${req.contextPath}/resources/fiveAdvantages/tutorRecommend/percentage.png">
+                    </div>
+                </div>
+            </li>
+            <li class="section2 col-xs-12">
+                <div class="container">
+                    <div class="right col-xs-6">
+                        <div class="text-column">
+                            <p class="subTitle">UIN名校教师顾问怎么推荐我？
+                                <div class="icon">
+                                    <img src="${req.contextPath}/resources/fiveAdvantages/tutorRecommend/2g.png">
+                                </div>
+                            </p>
+                            <p>UIN作为一条重要、有效的渠道，通过学术交流及社会</p>
+                            <p>化活动等方式，令这些教职人员能够接触并结识符合招</p>
+                            <p>生标准的申请者。</p>
+                        </div>
+                    </div>
+                    <div class="left col-xs-6">
+                        <img src="${req.contextPath}/resources/fiveAdvantages/tutorRecommend/envelope.png">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom col-xs-12">
+        <div class="container">
+            <p>现在就开始留学之路</p>
+            <ul class="nopadding">
+                <li>
+                    <a class="btn btn-lg" href="http://ufoffer.com/ufoffer/getStudyPlan.do">选校定位</a>
+                </li>
+                <li>
+                    <a class="btn btn-lg" href="http://ufoffer.com/ufoffer/consultantQuery.do?country=&academy=&academyLabel=&major=">寻找教师顾问</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    #parse("footer-parts.vm")
+    <script type="text/javascript" src="${req.contextPath}/js/tutorRecommend.js"></script>
+</body>

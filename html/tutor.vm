@@ -1,0 +1,123 @@
+#parse("header.vm")
+
+
+<body>
+<link rel="stylesheet" href="css/solution1.css">
+
+<div id="bodyFlowContainer" class="tutor">
+    <div class="title-container">
+        <img class="title-img" src="${req.contextPath}/resources/tutor/title-img.png">
+        <div class="row title-content">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <img class="title-icon" src="${req.contextPath}/resources/tutor/banner-icon-1.png">
+                <div class="title">全程教师辅导</div>
+                <div class="split"></div>
+                <div class="sub-title">毕业有保障，爸妈才安心。</div>
+            </div>
+        </div>
+        <div class="arrow-container">
+            <a class="arrow right" id="arrow-right-action" href="http://ufoffer.com/ufoffer/studyPlan.do"><div id="arrow-right" style="background-image: url('${req.contextPath}/resources/tutor/arrow-right.png'); background-position: 0px 50%;"></div></a>
+            <a class="arrow left" id="arrow-left-action" href="http://ufoffer.com/ufoffer/assistantApply.do"><div id="arrow-left" style="background-image: url('${req.contextPath}/resources/tutor/arrow-left.png'); background-position: 20px 50%;"></div></a>
+        </div>
+    </div>
+    <div class="center  col-lg-10 col-lg-offset-1">
+        <div class="row feature">
+            <div class="col-sm-2 index">
+
+            </div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/tutor/1.png">过渡性课程，快速适应西式教育。</div>
+                <div class="content">初到国外，第一次课上讨论，第一次做演讲，第一次写论文，第一次考试…都成了需要面对</div>
+                <div class="content">的莫大挑战。</div>
+                <div class="content">UIN内部教师手把手教你做Presentation，教你Academic Writing，让你从容应对一切挑战。</div>
+            </div>
+        </div>
+        <div class="row feature">
+            <div class="col-sm-2 index">
+            </div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/tutor/2.png">全程授课，精确到每门课的辅导规划。</div>
+                <div class="content">有人说名校都是宽进严出，顺利毕业也要烧香拜佛图书馆坐穿。</div>
+                <div class="content">UIN内部教师针对你的每一门课程，细化到每一次考试，每一个assignment，进行有针对性的辅</div>
+                <div class="content">导，令你毕业无忧。</div>
+            </div>
+        </div>
+
+        <div class="row apply">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"> UIN留学全程辅导包括一下课程：</div>
+                <div class="split">
+                    <div class="apply-types col-sm-12 nopadding">
+                        <div class="apply-types nopadding">
+                            <div class="col-sm-12 nopadding">
+                                <div class="col-sm-3">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/tutor/Exam.png"></div>
+                                        <div class="part col-sm-6">Exam</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/tutor/Assignment.png"></div>
+                                        <div class="part col-sm-6">Assignment</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/tutor/Debate.png"></div>
+                                        <div class="part col-sm-6">Debate</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 nopadding">
+                                <div class="col-sm-3">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/tutor/Essay.png"></div>
+                                        <div class="part col-sm-6">Essay</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/tutor/Project.png"></div>
+                                        <div class="part col-sm-6">Project</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/tutor/Dissertation.png"></div>
+                                        <div class="part col-sm-6">Dissertation</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row time-line col-lg-12 nomargin">
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="time-item">
+                    <div class="title">开启留学之路</div>
+                    <div class="content">让你毕业无忧的方案才是整体留学解决方案</div>
+                </div>
+
+                <div class="action-arrow" id="apply-action-bg">
+                    <a id="arrow-bottom-action" href="http://ufoffer.com/ufoffer/studyPlan.do">
+                        <div id="arrow-bottom" style="background-image: url('${req.contextPath}/resources/tutor/arrow-right-bottom.png'); background-position: 0px 50%;"></div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#parse("footer-parts.vm")
+<script type="text/javascript" src="${req.contextPath}/js/solution.js"></script>
+<div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1600</span> x <span class="tooltipHeight" id="winHeight">860</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">677</span> x <span class="tooltipHeight" id="vpHeight">775</span></div></body>
+</html>

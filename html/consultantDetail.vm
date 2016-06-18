@@ -1,0 +1,188 @@
+#parse("header.vm")
+<html>
+<link rel="stylesheet" href="${req.contextPath}/css/consultant.css">
+<body>
+<div id="bodyFlowContainer">
+    <img id="banner-img" src="${req.contextPath}/resources/consultant/consultant-bg.png">
+    <div class="row" id="user-info-header">
+        <div class="col-sm-1 col-md-2"></div>
+        <div class="col-sm-3 col-md-2" id="user-left">
+            <div id="user-icon"><img src="${cdn_path}${consultant.iconUrl}"></div>
+            <div id="user-name">${consultant.firstName}&nbsp;${consultant.lastName}</div>
+            <div class="row user-info">
+                <div class="col-xs-6 title">身份验证</div>
+                <div class="col-xs-6 content"><img class="auth-icon" src="${req.contextPath}/resources/consultant/auth.png"></div>
+            </div>
+            <div class="row user-info">
+                <div class="col-xs-6 title">文书评分</div>
+                <div class="col-xs-6 content" id="user-info-review-cont" star="${consultant.commentScore}"></div>
+            </div>
+            <div class="row user-info">
+                <div class="col-xs-6 title">浏览人数</div>
+                <div class="col-xs-6 content"><img class="num-icon" src="${req.contextPath}/resources/consultant/num.png">256</div>
+            </div>
+            <div class="redBtn">预约&nbsp;Ta</div>
+        </div>
+        <div class="col-sm-6 col-md-6" id="user-right">
+            <div id="user-right-top">
+                <div id="university">
+                    <span class="chinese">${consultant.academyChineseName}</span>
+                    <span class="english">${consultant.academyName}</span>
+                </div>
+                <div id="major">
+                    <span class="chinese">${consultant.subjectChineseName}</span>
+                    <span class="english">${consultant.subjectName}&nbsp;|&nbsp;Project Management</span>
+                </div>
+            </div>
+            <div id="user-introduce">${consultant.introduce}</div>
+        </div>
+    </div>
+    <div class="row" id="archivements-bg">
+        <div class="col-sm-12 triangle"><img src="${req.contextPath}/resources/consultant/fff.png"></div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-5" id="archivements">
+            <div class="chinese">学术成就</div>
+            <div class="english">Academic Achivements</div>
+            <div class="content">Certificates:
+                APM Project Management Qualification
+                APM Introductory Certificate in Project Management
+                Certificate of Spanish Language and culture – Intermediate B level</div>
+        </div>
+    </div>
+    <div class="row" id="background-bg">
+        <div class="col-sm-12 triangle"><img src="${req.contextPath}/resources/consultant/eee.png"></div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10" id="background">
+            <div class="title-chinese">教育背景</div>
+            <div class="title-english">Education Background</div>
+            <div class="back-item">
+                <div class="redBtn">
+                    <div>学&nbsp;&nbsp;&nbsp;士</div>
+                    <div>Bachelor</div>
+                </div>
+                <div class="content">
+                    <div>London Metropolitan University     Interior Design and Technology and Marketing</div>
+                    <div>First Class BA (Hons)          2001-2004          London, UK</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="back-item">
+                <div class="redBtn">
+                    <div>硕&nbsp;&nbsp;&nbsp;士</div>
+                    <div>Master</div>
+                </div>
+                <div class="content">
+                    <div>UCL     International Real Estate and Planning</div>
+                    <div>MSc          2004-2005          London, UK</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="back-item">
+                <div class="redBtn">
+                    <div>博&nbsp;&nbsp;&nbsp;士</div>
+                    <div>Ph.D</div>
+                </div>
+                <div class="content">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="back-item">
+                <div class="redBtn">
+                    <div>其&nbsp;&nbsp;&nbsp;他</div>
+                    <div>Others</div>
+                </div>
+                <div class="content">
+                    <div>Study Certificate of Interior Design, Lorenzo de’Medici, Italy</div>
+                    <div>School-leaving Examination (Czech Language, English Language, Mathematics, Aesthetic educa</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row" id="tab-panel">
+                <div class="col-sm-3 tab-bottom"></div>
+                <div class="col-sm-3 tab active" id="answer">
+                    <div class="contr">
+                        <div class="title">
+                            <div>回答问题</div>
+                            <div>Q & A</div>
+                        </div>
+                        <span class="count">(230)</span>
+                    </div>
+                </div>
+                <div class="col-sm-3 tab unactive" id="reviews">
+                    <div class="contr">
+                        <div class="title">
+                            <div>评<span style="padding-left: 25px;"></span>价</div>
+                            <div>Reviews</div>
+                        </div>
+                        <span class="count">(20)</span>
+                    </div>
+                </div>
+                <div class="col-sm-3 tab-bottom"></div>
+            </div>
+        </div>
+    </div>
+    <div id="answer-panel">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-1"><img class="student-img" src="${req.contextPath}/resources/consultant/user_5.png"></div>
+            <div class="col-sm-7">
+                <div class="title">UCL商科是否需要考Gmat，有没有具体的专业要求？</div>
+                <div><span class="time"><img class="time-icon" src="${req.contextPath}/resources/consultant/time.png">2016-2-14 19:35</span><span class="num"><img class="num-icon" src="${req.contextPath}/resources/consultant/num.png">256</span></div>
+                <div class="content">GMAT考试的结构和GRE类似，包括Verbal、Quantitative和Analytical Writing，前两部分满分800，写作满分6分。GMAT分数的组成跟其他考试不太一样，你是不会知道800分是怎么来的，或者是你的分数是怎么构成的。 简单的说，数学和语文部分各自满分为51分，语文包括逻辑、语法、阅读。但是GMAT的分数不是平均分配的，考完以后你只知道比如你的数学是50分，是所有考生的前X%；语文是45分，是所有考生的前y%；总分是XXX分（三位数）。 至于是如何加总分配分数的，是考生不知道的。</div>
+                <div class="redBtn">阅读更多</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-1"><img class="student-img" src="${req.contextPath}/resources/consultant/user_5.png"></div>
+            <div class="col-sm-7">
+                <div class="title">UCL商科是否需要考Gmat，有没有具体的专业要求？</div>
+                <div><span class="time"><img class="time-icon" src="${req.contextPath}/resources/consultant/time.png">2016-2-14 19:35</span><span class="num"><img class="num-icon" src="${req.contextPath}/resources/consultant/num.png">256</span></div>
+                <div class="content">GMAT考试的结构和GRE类似，包括Verbal、Quantitative和Analytical Writing，前两部分满分800，写作满分6分。GMAT分数的组成跟其他考试不太一样，你是不会知道800分是怎么来的，或者是你的分数是怎么构成的。 简单的说，数学和语文部分各自满分为51分，语文包括逻辑、语法、阅读。但是GMAT的分数不是平均分配的，考完以后你只知道比如你的数学是50分，是所有考生的前X%；语文是45分，是所有考生的前y%；总分是XXX分（三位数）。 至于是如何加总分配分数的，是考生不知道的。</div>
+                <div class="redBtn">阅读更多</div>
+            </div>
+        </div>
+    </div>
+    <div id="reviews-panel">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-1"><img class="student-img" src="${req.contextPath}/resources/consultant/user_5.png"></div>
+            <div class="col-sm-7">
+                <div class="title">
+                    <span class="left">北京交通大学</span><span class="left">机械工程博士</span><span class="left">英国</span>
+                    <span class="right">项目管理硕士</span>
+                    <span class="right">伦敦大学学院</span>
+                </div>
+                <div><span class="time"><img class="time-icon" src="${req.contextPath}/resources/consultant/time.png">2016-2-14 19:35</span><span class="num"><img class="num-icon" src="${req.contextPath}/resources/consultant/num.png">256</span></div>
+                <div class="content">GMAT考试的结构和GRE类似，包括Verbal、Quantitative和Analytical Writing，前两部分满分800，写作满分6分。GMAT分数的组成跟其他考试不太一样，你是不会知道800分是怎么来的，或者是你的分数是怎么构成的。 简单的说，数学和语文部分各自满分为51分，语文包括逻辑、语法、阅读。但是GMAT的分数不是平均分配的，考完以后你只知道比如你的数学是50分，是所有考生的前X%；语文是45分，是所有考生的前y%；总分是XXX分（三位数）。 至于是如何加总分配分数的，是考生不知道的。</div>
+                <div class="redBtn">阅读更多</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-1"><img class="student-img" src="${req.contextPath}/resources/consultant/user_5.png"></div>
+            <div class="col-sm-7">
+                <div class="title">
+                    <span class="left">北京交通大学</span><span class="left">机械工程博士</span><span class="left">英国</span>
+                    <span class="right">项目管理硕士</span>
+                    <span class="right">伦敦大学学院</span>
+                </div>
+                <div><span class="time"><img class="time-icon" src="${req.contextPath}/resources/consultant/time.png">2016-2-14 19:35</span><span class="num"><img class="num-icon" src="${req.contextPath}/resources/consultant/num.png">256</span></div>
+                <div class="content">GMAT考试的结构和GRE类似，包括Verbal、Quantitative和Analytical Writing，前两部分满分800，写作满分6分。GMAT分数的组成跟其他考试不太一样，你是不会知道800分是怎么来的，或者是你的分数是怎么构成的。 简单的说，数学和语文部分各自满分为51分，语文包括逻辑、语法、阅读。但是GMAT的分数不是平均分配的，考完以后你只知道比如你的数学是50分，是所有考生的前X%；语文是45分，是所有考生的前y%；总分是XXX分（三位数）。 至于是如何加总分配分数的，是考生不知道的。</div>
+                <div class="redBtn">阅读更多</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+#parse("footer.vm")
+<script type="text/javascript" src="${req.contextPath}/js/consultant.js"></script>
+</html>

@@ -1,0 +1,118 @@
+#parse("header.vm")
+<body>
+<link rel="stylesheet" href="css/solution1.css">
+<div id="bodyFlowContainer" class="consultantBooking">
+    <div class="title-container">
+        <img class="title-img" src="${req.contextPath}/resources/consultantBooking/title-img.png">
+        <div class="row title-content">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <img class="title-icon" src="${req.contextPath}/resources/consultantBooking/banner-icon-1.png">
+                <div class="title">预约内部顾问 </div>
+                <div class="split"></div>
+                <div class="sub-title">名校申请，“有人”很重要</div>
+            </div>
+        </div>
+        <div class="arrow-container">
+            <a class="arrow right" id="arrow-right-action" href="http://ufoffer.com/ufoffer/backgroundImproving.do"><div id="arrow-right" style="background-image: url('${req.contextPath}/resources/consultantBooking/arrow-right.png'); background-position: 0px 50%;"></div></a>
+            <a class="arrow left" id="arrow-left-action" href="http://ufoffer.com/ufoffer/studyPlan.do"><div id="arrow-left" style="background-image: url('${req.contextPath}/resources/consultantBooking/arrow-left.png'); background-position: 20px 50%;"></div></a>
+        </div>
+    </div>
+    <div class="center  col-lg-10 col-lg-offset-1">
+        <div class="row feature">
+            <div class="col-sm-2 index">
+
+            </div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/consultantBooking/1.png">常春藤G5名校现／前招生官</div>
+                <div class="content">在UIN，每位学生都可以享受招生权威的一对一服务。</div>
+                <div class="content">2015年度，超过40%的UIN学生被推荐入学。</div>
+            </div>
+        </div>
+        <div class="row feature">
+            <div class="col-sm-2 index">
+
+            </div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/consultantBooking/2.png">Dream School院系录取委员会成员</div>
+                <div class="content">你知道吗？</div>
+                <div class="content">相比于本科生，研究生录取更多由具体院系的录取委员会作出最终决定。</div>
+            </div>
+        </div>
+        <div class="row feature">
+            <div class="col-sm-2 index"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/consultantBooking/3.png">与你同专业的资深教职人士</div>
+                <div class="content">多年积累的专业深度，长期行业研究经验。</div>
+                <div class="content">不管你的专业是“大热门”还是“少而美”，我们都能提供专业对口的教职人士供你选择。</div>
+            </div>
+        </div>
+
+
+        <div class="row apply">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="title">UIN的内部顾问可以为你做什么</div>
+                <div class="split">
+                    <div class="content col-sm-6">
+                        <div class="col-sm-3"><img src="${req.contextPath}/resources/consultantBooking/student-data1.png"></div>
+                        <div class="col-sm-9">Students Attended UK Top 10/US Top 30 Universities</div>
+                    </div>
+                    <div class="content col-sm-6">
+                        <div class="col-sm-3"><img src="${req.contextPath}/resources/consultantBooking/student-data2.png"></div>
+                        <div class="col-sm-9">Students Recommended by Consultants</div>
+                    </div>
+                    <div class="apply-types col-sm-12 nopadding">
+                        <div class="apply-types nopadding">
+                            <div class="apply-type col-sm-6 col-lg-2">
+                                <div class="img"><img src="${req.contextPath}/resources/consultantBooking/apply-1.png"></div>
+                                <div>学术研讨</div>
+                            </div>
+                            <div class="apply-type col-sm-6 col-lg-2">
+                                <div class="img"><img src="${req.contextPath}/resources/consultantBooking/apply-2.png"></div>
+                                <div>文书定稿</div>
+                            </div>
+                            <div class="apply-type col-sm-6 col-lg-2">
+                                <div class="img"><img src="${req.contextPath}/resources/consultantBooking/apply-3.png"></div>
+                                <div>推荐入学</div>
+                            </div>
+                            <div class="apply-type col-sm-6 col-lg-2">
+                                <div class="img"><img src="${req.contextPath}/resources/consultantBooking/apply-4.png"></div>
+                                <div>全程辅导</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row time-line col-lg-12 nomargin" style="background-image: url('${req.contextPath}/resources/consultantBooking/footer-timeline.gif')">
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="time-item">
+                    <div><img src="${req.contextPath}/resources/consultantBooking/time-1.png"></div>
+                    <div>根据专业院校寻找顾问</div>
+                </div>
+                <div class="time-item">
+                    <div><img src="${req.contextPath}/resources/consultantBooking/time-2.png"></div>
+                    <div>选择最适合你的顾问</div>
+                </div>
+                <div class="time-item">
+                    <div><img src="${req.contextPath}/resources/consultantBooking/time-3.png"></div>
+                    <div>选择服务内容</div>
+                </div>
+                <div class="action-arrow" id="apply-action-bg">
+                    <a id="arrow-bottom-action" href="http://ufoffer.com/ufoffer/backgroundImproving.do">
+                        <div id="arrow-bottom" style="background-image: url('${req.contextPath}/resources/consultantBooking/arrow-right-bottom.png'); background-position: 0px 50%;"></div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#parse("footer-parts.vm")
+<script type="text/javascript" src="${req.contextPath}/js/solution.js"></script>
+<div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1600</span> x <span class="tooltipHeight" id="winHeight">860</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">677</span> x <span class="tooltipHeight" id="vpHeight">775</span></div></body>
+</html>

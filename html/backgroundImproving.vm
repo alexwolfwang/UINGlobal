@@ -1,0 +1,72 @@
+#parse("header.vm")
+
+
+<body>
+<link rel="stylesheet" href="css/solution1.css">
+
+<div id="bodyFlowContainer">
+    <div class="title-container">
+        <img class="title-img" src="${req.contextPath}/resources/backgroundImproving/title-img.png">
+        <div class="row title-content">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <img class="title-icon" src="${req.contextPath}/resources/backgroundImproving/banner-icon-1.png">
+                <div class="title">有效背景提升</div>
+                <div class="split"></div>
+                <div class="sub-title">我们帮你成为名校寻找的人</div>
+            </div>
+        </div>
+        <div class="arrow-container">
+            <a class="arrow right" id="arrow-right-action" href="http://ufoffer.com/ufoffer/documentPrepare.do"><div id="arrow-right" style="background-image: url('${req.contextPath}/resources/backgroundImproving/arrow-right.png'); background-position: 0px 50%;"></div></a>
+            <a class="arrow left" id="arrow-left-action" href="http://ufoffer.com/ufoffer/consultantBooking.do"><div id="arrow-left" style="background-image: url('${req.contextPath}/resources/backgroundImproving/arrow-left.png'); background-position: 20px 50%;"></div></a>
+        </div>
+    </div>
+    <div class="center  col-lg-10 col-lg-offset-1">
+        <div class="row feature">
+            <div class="col-sm-2 index"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/backgroundImproving/1.png">你说自己不够学术？</div>
+                <div class="content">UIN带你参与世界名校教师的学术研讨会，</div>
+                <div class="content"> 成为学霸，没有你想的那么难。</div>
+            </div>
+        </div>
+        <div class="row feature">
+            <div class="col-sm-2 index"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/backgroundImproving/2.png">没有高大上的实习？</div>
+                <div class="content">UIN为你鼎力推荐世界500强的Trainee项目，</div>
+                <div class="content">共同为你冲击名校背书。</div>
+            </div>
+        </div>
+        <div class="row feature">
+            <div class="col-sm-2 index"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/backgroundImproving/3.png">缺乏社会实践经历？</div>
+                <div class="content">世界知名NGO项目，从United Nation到世界环境保护。</div>
+                <div class="content">不仅帮你的申请加分，还带你认识这个世界。</div>
+                <div class="content">我们懂专业，更懂你想要什么。</div>
+            </div>
+        </div>
+    </div>
+    <div class="row time-line background-improving col-lg-12 nomargin">
+        <div class="col-lg-10 col-lg-offset-1">
+             <div class="col-sm-2"></div>
+                <div class="col-sm-10 nopadding">
+                    <div class="time-item">
+                        <div class="title">开启留学之路</div>
+                        <div class="content">UIN帮你成为名校苦苦寻找的人</div>
+                    </div>
+                    <div class="action-arrow" id="apply-action-bg">
+                        <a id="arrow-bottom-action" href="http://ufoffer.com/ufoffer/documentPrepare.do">
+                            <div id="arrow-bottom" style="background-image: url('${req.contextPath}/resources/backgroundImproving/arrow-right-bottom.png'); background-position: 0px 50%;"></div>
+                        </a>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+#parse("footer-parts.vm")
+<script type="text/javascript" src="${req.contextPath}/js/solution.js"></script>
+<div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1600</span> x <span class="tooltipHeight" id="winHeight">860</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">677</span> x <span class="tooltipHeight" id="vpHeight">775</span></div></body>
+</html>

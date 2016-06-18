@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alex.W" />
+    <title>UIN助力 · 背景提升</title>
+    <link rel="stylesheet" type="text/css" href="${req.contextPath}/css/fiveAdvantages.css">
+</head>
+#parse("header.vm")
+<body>
+<div class="uinHelp" id="bodyFlowContainer">
+<div class="introduction">
+    <div class="container">
+        <div class="title">UIN助力 · 背景提升</div>
+        <p>名校普遍看重经历，可是我只专注了学业怎么办？
+            UIN携500强名企、知名NGO以及顶尖名校科研机构
+            为你提供实习、社会实践及科研项目机会，为冲击
+            名校共同背书。</p>
+    </div>
+</div>
+<div class="main">
+    <ul class="split-section col-xs-12 nopadding">
+        <li class="section1">
+            <div class="container">
+                <div class="left col-xs-6">
+                    <div class="text-column">
+                        <p class="subTitle">500强名企实习推荐
+                            <div class="icon">
+                                <img src="${req.contextPath}/resources/fiveAdvantages/uinHelp/1g.png">
+                            </div>
+                        </p>
+                        <p>一段高大上的顶级名企实习经历，</p>
+                        <p>一份出自高级主管的有力推荐信，</p>
+                        <p>毫无疑问，</p>
+                        <p>将帮助你敲开名校大门。</p>
+                        <p>2016年UIN全程留学解决方案，</p>
+                        <p>全面覆盖9大行业500强企业实习计划。</p></div>
+                </div>
+                <div class="right col-xs-6">
+                    <img src="${req.contextPath}/resources/fiveAdvantages/uinHelp/card.png">
+                </div>
+            </div>
+        </li>
+        <li class="section2 col-xs-12">
+            <div class="container">
+                <div class="right col-xs-6">
+                    <div class="text-column">
+                        <p class="subTitle">世界知名NGO实践项目
+                        <div class="icon">
+                            <img src="${req.contextPath}/resources/fiveAdvantages/uinHelp/2g.png">
+                        </div>
+                        </p>
+                        <p>从联合国总部的实习项目，</p>
+                        <p>到肩负地球未来的环境保护计划，</p>
+                        <p>抑或是远赴大洋彼岸的志愿者行动，</p>
+                        <p>UIN为你力荐社会实践，</p>
+                        <p>不仅为了申请，</p>
+                        <p>更为了绚烂你的青春。</p>
+                    </div>
+                </div>
+                <div class="left col-xs-6">
+                    <img src="${req.contextPath}/resources/fiveAdvantages/uinHelp/ngo.png">
+                </div>
+            </div>
+        </li>
+        <li class="section3">
+            <div class="container">
+                <div class="left col-xs-6">
+                    <div class="text-column">
+                        <p class="subTitle">顶级名校科研项目
+                        <div class="icon">
+                            <img src="${req.contextPath}/resources/fiveAdvantages/uinHelp/3g.png">
+                        </div>
+                        </p>
+                        <p>从中科院致力于国家发展的科研成果，</p>
+                        <p>到MIT为了60亿人类的水质监测项目。</p>
+                        <p>UIN为你牵线搭桥，</p>
+                        <p>你也能够贡献自己的一份力量，</p>
+                        <p>而不止于申请。</p>
+                    </div>
+                </div>
+                <div class="right col-xs-6">
+                    <img src="${req.contextPath}/resources/fiveAdvantages/uinHelp/chem.png">
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="bottom col-xs-12">
+    <div class="container">
+        <p>UIN致力于帮助与见证每一位申请者的成长与蜕变</p>
+        <ul class="nopadding">
+            <li>
+                <a class="btn btn-lg" href="http://ufoffer.com/ufoffer/getStudyPlan.do">选校定位</a>
+            </li>
+            <li>
+                <a class="btn btn-lg" href="http://ufoffer.com/ufoffer/consultantQuery.do?country=&academy=&academyLabel=&major=">寻找教师顾问</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+#parse("footer-parts.vm")
+<script type="text/javascript" src="${req.contextPath}/js/uinHelp.js"></script>
+</body>

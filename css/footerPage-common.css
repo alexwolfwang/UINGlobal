@@ -1,0 +1,268 @@
+* {
+    font-size: 16px;
+}
+#top-container a { color: #9c9c9c; font-size: 12px;}
+body{
+    font-family: "STXihei","Avenir", Arial, "STHeitiSC-Light", "Microsoft YaHei";
+}
+.navbar {
+    margin-bottom:0px!important;
+}
+nav.navbar {
+    background-color:rgba(80,80,96,0.8);
+    min-height:15px!important;
+    height:70px!important;
+}
+.navbar-nav>li>a {
+    padding-top: 5px!important;
+    padding-bottom: 10px!important;
+    padding-right:50px!important;
+    font-family: "STXihei","Avenir", Arial, "STHeitiSC-Light", "Microsoft YaHei",serif !important;
+    font-style:normal!important;
+    font-size:18px!important;
+    color:#999999!important;
+}
+.nav .active>div {
+    margin-left:15px;
+    margin-top:10px;
+    width:68px;
+    height:4px;
+    background-color:#ee7f63;
+}
+.navbar-nav a:hover {
+    text-decoration:none!important;
+    color:#FFFFFF!important;
+    background-color: transparent !important;
+}
+
+
+.container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.container>.row {
+    margin-top:30px;
+
+}
+.container .row .col-md-3 {
+    padding-top: 0px;
+
+}
+.nopadding {
+    padding: 0;
+}
+
+.navbar-nav {
+    padding-top:20px;
+}
+
+.container .row .container-title {
+    text-align: center;
+    color: black;
+}
+.container div {
+    font-family: "STXihei","Avenir", Arial, "STHeitiSC-Light", "Microsoft YaHei";
+    font-style:normal;
+    color:#666666;
+}
+.container .content {
+    font-size:16px;
+    text-align:justify;
+    text-justify:inter-ideograph;
+}
+.container ul {
+    padding-left: 40px;
+}
+.container ul li {
+    margin-bottom: 20px;
+}
+.white-block {
+    width:46% !important;
+
+    padding-bottom:40px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top:20px;
+    padding-left: 0;
+
+}
+.white-block img {
+    width:60px;
+    height:55px;
+}
+.white-block .block-title {
+    font-weight:700;
+    font-size:16px;
+    color:#ee7f63;
+}
+.white-block .block-content {
+    font-size:16px;
+    color:#000000;
+}
+.block-title+div {
+    margin-top:10px;
+}
+.earth-image {
+
+    text-align:center;
+    margin-bottom:30px;
+    padding-top:20px;
+
+}
+
+.earth-image .earth-title {
+    font-size:20px;
+    font-weight:700;
+    color:#000000;
+    margin-bottom:10px
+}
+.earth-image .earth-subtitle {
+    font-size:20px;
+    font-weight:700;
+    color:#999999;
+    border-bottom: 2px solid #CCCCCC;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.earth-image img {
+    width: 100%;
+}
+.head-banner{
+    width: 100%;
+    background-image: url(http://static.ufoffer.com/images/aboutus-banner.jpg);
+    background-size: cover;
+    height: 200px;
+    margin-top: 90px;
+}
+.moveUp{
+    margin-top: -70px;
+}
+.toHome{
+    text-align: center;
+}
+.goHomeButton{
+    display: inline-block;width:200px;
+    height: 43px;
+    text-align: center;background-color: #76CECE;
+    color: #FFFFFF !important;
+    line-height: 43px;
+}
+.goHomeButton:hover{
+    color: #FFFFFF;
+}
+.marginBottom{
+    margin-bottom: 20px;
+}
+
+.container .subtitle {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    font-size:24px;
+    color:#000000;
+    text-align:center;
+
+}
+.container .content {
+    padding-left:50px;
+    padding-right: 50px;
+    padding-bottom:30px;
+    margin-bottom:50px;
+
+padding-top:30px;
+}
+.block-title {
+    color:#ee7f63;
+}
+.side-link li a{
+    color: #999999 !important;
+}
+.side-link li a:hover{
+    color: rgba(102,102,102,1) !important;
+}
+.side-link li.active a{
+    color: #000000 !important;
+}
+.name-date{
+    margin-top: 50px;
+}
+.content h2{
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align:center;
+}
+.content p{
+    margin-bottom:30px;
+}
+@media screen and (max-width: 1024px){
+    .white-block{
+        padding-top:30px;padding-bottom: 30px;
+    }
+    .white-block .block-content{
+        font-size: 1em;
+    }
+    .earth-image{
+        height:350px;
+    }
+
+    .pad-width{
+        width:100%;
+    }
+}
+@media (min-width: 768px){
+    .col-md-3{
+        width:25%;
+        float: left;
+    }
+    .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+    .earth-image{
+        height:300px;
+    }
+    .container .content{
+        padding:10px 20px;
+    }
+}
+@media (min-width: 768px){
+    .col-md-3{
+        width:25%;
+        float: left;
+    }
+    .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+}
+@media screen and (max-width: 736px){
+    nav.navbar{
+        padding-left: 10px !important;
+    }
+    .navbar-nav>li{
+        float: left;
+    }
+    .navbar-nav > li > a{
+        padding-right: 10px !important;
+        padding-left: 0px !important;
+        font-size: 0.875em !important;
+    }
+    nav.navbar ul{
+        margin-left: 0px;
+    }
+    .active > div{
+        margin-left: 0px;
+    }
+    .container > .row{
+        margin-left: 0px;margin-right: 0px;
+    }
+    .head-banner{
+        background-position: center center;
+    }
+    .container .content{
+        padding:0px 20px;
+    }
+}

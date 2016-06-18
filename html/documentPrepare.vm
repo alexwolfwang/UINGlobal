@@ -1,0 +1,116 @@
+#parse("header.vm")
+
+<body>
+<link rel="stylesheet" href="css/solution1.css">
+
+<div id="bodyFlowContainer" class="document">
+    <div class="title-container">
+        <img class="title-img" src="${req.contextPath}/resources/documentPrepare/title-img.png">
+        <div class="row title-content">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <img class="title-icon" src="${req.contextPath}/resources/documentPrepare/banner-icon-1.png">
+                <div class="title">撰写极致文书</div>
+                <div class="split"></div>
+                <div class="sub-title">极致，就是打动招生老师的那一刻</div>
+            </div>
+        </div>
+        <div class="arrow-container">
+            <a class="arrow right" id="arrow-right-action" href="http://ufoffer.com/ufoffer/assistantApply.do"><div id="arrow-right" style="background-image: url('${req.contextPath}/resources/documentPrepare/arrow-right.png'); background-position: 0px 50%;"></div></a>
+            <a class="arrow left" id="arrow-left-action" href="http://ufoffer.com/ufoffer/backgroundImproving.do"><div id="arrow-left" style="background-image: url('${req.contextPath}/resources/documentPrepare/arrow-left.png'); background-position: 20px 50%;"></div></a>
+        </div>
+    </div>
+    <div class="center  col-lg-10 col-lg-offset-1">
+        <div class="row feature">
+            <div class="col-sm-2 index">
+
+            </div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/documentPrepare/1.png">Native英语，文法错误‘0’容忍</div>
+                <div class="content">申请材料让校方读起来舒服，体现了申请者的尊重与态度。</div>
+                <div class="content">UIN的全部文书由Native Speaker为你打造到极致。</div>
+            </div>
+        </div>
+        <div class="row feature">
+            <div class="col-sm-2 index">
+
+            </div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/documentPrepare/2.png">名校同专业内部教师为你撰书点睛</div>
+                <div class="content">懂你，更懂专业。</div>
+                <div class="content">多年积累的专业深度，长期行业研究的经验，为你全面体现你对专业的理解。</div>
+            </div>
+        </div>
+        <div class="row feature">
+            <div class="col-sm-2 index"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="title"><img src="${req.contextPath}/resources/documentPrepare/3.png">历史传承的工匠精神，字句必究</div>
+                <div class="content">1799年Royal Institution（RI）建立，英国科学家以严谨的科学态度闻名于世。</div>
+                <div class="content">21世纪的今天，UIN秉承了严谨的科学态度与大师的工匠精神，打磨你的文书。</div>
+            </div>
+        </div>
+
+
+        <div class="row apply">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="title">每一份出自我们的文书都具备以下特点：</div>
+                <div class="split">
+                    <div class="apply-types col-sm-12 nopadding">
+                        <div class="apply-types nopadding">
+                            <div class="col-sm-12 nopadding">
+                                <div class="col-sm-4">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/documentPrepare/Native.png"></div>
+                                        <div class="part col-sm-6">Native</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/documentPrepare/Practical.png"></div>
+                                        <div class="part col-sm-6">Practical</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 nopadding">
+                                <div class="col-sm-4">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/documentPrepare/Professional.png"></div>
+                                        <div class="part col-sm-6">Professional</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="apply-part">
+                                        <div class="img col-sm-6"><img src="${req.contextPath}/resources/documentPrepare/Academic.png"></div>
+                                        <div class="part col-sm-6">Academic</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row time-line col-lg-12 nomargin">
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 nopadding">
+                <div class="time-item">
+                    <div class="title">开启留学之路</div>
+                    <div class="content">用一份真正极致的文书打动名校招生老师</div>
+                </div>
+
+                <div class="action-arrow" id="apply-action-bg">
+                    <a id="arrow-bottom-action" href="http://ufoffer.com/ufoffer/assistantApply.do">
+                        <div id="arrow-bottom" style="background-image: url('${req.contextPath}/resources/documentPrepare/arrow-right-bottom.png'); background-position: 0px 50%;"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#parse("footer-parts.vm")
+<script type="text/javascript" src="${req.contextPath}/js/solution.js"></script>
+<div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1600</span> x <span class="tooltipHeight" id="winHeight">860</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">677</span> x <span class="tooltipHeight" id="vpHeight">775</span></div></body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, location=no , initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0 , minimal-ui , user-scalable=no, target-densitydpi=device-dpi">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="zwwang" />
+    <title>UFOffer</title>
+##    <link rel="stylesheet" href="${req.contextPath}/component/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+##    <link rel="stylesheet" href="${req.contextPath}/component/animate.css-master/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="${req.contextPath}/component/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <![endif]-->
+    <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+    <link rel="stylesheet" href="${req.contextPath}/component/animate.css-master/animate-common.css">
+    <link rel="stylesheet" href="${req.contextPath}/css/common1.css">
+
+</head>
+#set($cdn_path = "http://static.ufoffer.com")
+<script type="text/javascript">
+    var _cdn_path = '$cdn_path';
+    var _PATH = '${req.contextPath}';
+</script>
+#if(!$index)
+<div id="top-container-bg"></div>
+    <div id="top-container">
+        <div id="top-menu" class="nopadding">
+            <div class="navbar navbar-default" role="navigation">
+                <div id="navbar-head">
+                    <a class="navbar-brand top-logo"><img src="${req.contextPath}/resources/index/logo/logo.png" width="130"></a>
+                    <a id="simple-menu" class="navbar-toggle" data-toggle="#modalMenu">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                </div>
+            </div>
+            <div id="menu-item-container">
+                <div class="link-container">
+                    #if(${currentUser})
+                        <div id="loginUserContainer">
+
+                            <a class="dropdown-toggle" id="loginUserLabel" href="javascript:toggle('userMenuPanel');">
+                                <img id="loginUserImg" src="${req.contextPath}/resources/index/user-icon.png">${currentUser.username}
+                                <b class="caret"></b></a>
+                            <ul id="userMenuPanel" class="english">
+                                #if(${currentUser.userType} == 2)
+                                    <li><a href="${req.contextPath}/user.do?id=${currentUser.id}">Homepage</a></li>
+                                #end
+                                <li><a href="${req.contextPath}/page/appointment.jsp?menu=appointment">My Appointment</a></li>
+                                #if(${currentUser.userType} == 2)
+                                    <li><a href="${req.contextPath}/page/resume.jsp?menu=resume">My Profile</a></li>
+                                #end
+                                #if(${currentUser.userType} == 1)
+                                    <li><a href="${req.contextPath}/page/wishlist.jsp?menu=wishlist">My Wish List</a></li>
+                                #end
+                                <li><a href="${req.contextPath}/page/settings.jsp?menu=settings">My Settings</a></li>
+                                #if(${currentUser.userType} == 1)
+                                    <li><a href="${req.contextPath}/page/application.jsp?menu=application">My Application</a></li>
+                                #end
+                                #if(${currentUser.userType} == 3)
+                                    <li class="divider"></li>
+                                    <li><a href="${req.contextPath}/academyController.do?method=query">Academy Manage</a></li>
+                                    <li><a href="${req.contextPath}/specialtyController.do?method=query">Specialty Manage</a></li>
+                                    <li><a href="${req.contextPath}/page/appointmentManage.jsp?menu=appointment">Appointment Manage</a></li>
+                                    <li><a href="${req.contextPath}/userController.do?method=query">User Manage</a></li>
+                                    <li><a href="${req.contextPath}/page/positionStrategyManage.jsp?menu=position">PositionStrategy Manage</a></li>
+                                #end
+                                <li class="divider"></li>
+                                <li><a href="${req.contextPath}/logout.do">Log out</a></li>
+                            </ul>
+                        </div>
+                    #else
+                        <a onclick="__showLoginContainerPanel()"><div class="chinese signOrRegister">登<span style="padding-left: 8px"></span>录</div></a>
+                        <a onclick="__showRegistContainerPanel()"><div class="chinese signOrRegister">注<span style="padding-left: 8px"></span>册</div></a>
+                        <div class="split"></div>
+                        <a onclick="__showLoginContainerPanel()"><div class="english signOrRegister">Log<span style="padding-left: 8px"></span>in</div></a>
+                        <a onclick="__showRegistContainerPanel()"><div class="english signOrRegister">Sign<span style="padding-left: 8px"></span>up</div></a>
+                    #end
+                </div>
+                <a class="redBtn" href="${req.contextPath}/consultantIntroduce.do"><span>Become a consultant</span></a>
+
+                <a class="menu-item">学习辅导</a>
+
+                <a class="menu-item">申请追踪</a>
+
+                <a class="menu-item" href="${req.contextPath}/consultantQuery.do">名校顾问</a>
+
+                <a class="menu-item active" id="menu-item-plan">定制留学方案</a>
+
+                <a class="top-logo" href="${req.contextPath}"><img src="${req.contextPath}/resources/index/logo/logo.png" width="130"></a>
+
+            </div>
+        </div>
+    </div>
+#end
+<div class="modal fade" id="modalMenu">
+    <div class="navbar navbar-default" role="navigation">
+        <div id="navbar-head">
+            <a class="navbar-brand top-logo"><img src="${req.contextPath}/resources/index/logo/logo.png" width="130"></a>
+            <div class="close-container2">
+                <div id="close-simple-menu" class="close">x</div>
+            </div>
+        </div>
+    </div>
+    <div id="side-list" class="modal-body">
+        <a class="menu-item active">定制留学方案</a>
+        <a class="menu-item">名校顾问</a>
+        <a class="menu-item">申请追踪</a>
+        <a class="menu-item">学习辅导</a>
+        <a class="redBtn" href="${req.contextPath}/consultantIntroduce.do"><span>Become a consultant</span></a>
+        <div class="link-container">
+            #if(${currentUser})
+            <div id="loginUserContainer">
+
+                <a class="dropdown-toggle" id="loginUserLabel" href="javascript:toggle('userMenuPanel');">
+                    <img id="loginUserImg" src="${req.contextPath}/resources/index/user-icon.png">${currentUser.username}
+                    <b class="caret"></b></a>
+                <ul id="userMenuPanel" class="english">
+                    #if(${currentUser.userType} == 2)
+                    <li><a href="${req.contextPath}/user.do?id=${currentUser.id}">Homepage</a></li>
+                    #end
+                    <li><a href="${req.contextPath}/page/appointment.jsp?menu=appointment">My Appointment</a></li>
+                    #if(${currentUser.userType} == 2)
+                    <li><a href="${req.contextPath}/page/resume.jsp?menu=resume">My Profile</a></li>
+                    #end
+                    #if(${currentUser.userType} == 1)
+                    <li><a href="${req.contextPath}/page/wishlist.jsp?menu=wishlist">My Wish List</a></li>
+                    #end
+                    <li><a href="${req.contextPath}/page/settings.jsp?menu=settings">My Settings</a></li>
+                    #if(${currentUser.userType} == 1)
+                    <li><a href="${req.contextPath}/page/application.jsp?menu=application">My Application</a></li>
+                    #end
+                    #if(${currentUser.userType} == 3)
+                    <li class="divider"></li>
+                    <li><a href="${req.contextPath}/academyController.do?method=query">Academy Manage</a></li>
+                    <li><a href="${req.contextPath}/specialtyController.do?method=query">Specialty Manage</a></li>
+                    <li><a href="${req.contextPath}/page/appointmentManage.jsp?menu=appointment">Appointment Manage</a></li>
+                    <li><a href="${req.contextPath}/userController.do?method=query">User Manage</a></li>
+                    <li><a href="${req.contextPath}/page/positionStrategyManage.jsp?menu=position">PositionStrategy Manage</a></li>
+                    #end
+                    <li class="divider"></li>
+                    <li><a href="${req.contextPath}/logout.do">Log out</a></li>
+                </ul>
+            </div>
+            #else
+            <div>
+                <a onclick="__showLoginContainerPanel()"><div class="chinese signOrRegister">登<span style="padding-left: 8px"></span>录</div></a>
+                <a onclick="__showLoginContainerPanel()"><div class="english signOrRegister">Log<span style="padding-left: 8px"></span>in</div></a>
+            </div>
+            <div>
+                <a onclick="__showRegistContainerPanel()"><div class="chinese signOrRegister">注<span style="padding-left: 8px"></span>册</div></a>
+                <a onclick="__showRegistContainerPanel()"><div class="english signOrRegister">Sign<span style="padding-left: 8px"></span>up</div></a>
+            </div>
+            #end
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+<div class="modal" id="loginContainerPanel">
+    <div class="close-container"><div class="close">×</div><div class="clearfix"></div></div>
+    <div class="tab-container">
+        <div id="tab-wechat" class="tab-title active">
+            <div class="chinese">微信登录</div>
+            <div class="english">Log in with Wechat</div>
+        </div>
+        <div id="tab-ufoffer" class="tab-title">
+            <div class="chinese">账号登录</div>
+            <div class="english">Log in with UFOffer</div>
+        </div>
+    </div>
+
+    <div id="tab-wechat-panel" class="tab-panel">
+        <div id="wechat-code"><img src=""></div>
+        <div class="chinese">微信扫码登录</div>
+        <div class="english">Please scan by your Wechat</div>
+        <a class="help chinese" href="javascript:;">帮助</a>
+        <a class="help english" href="javascript:;">Help</a>
+    </div>
+    <div id="tab-ufoffer-panel" class="tab-panel">
+        <div class="input-container" style=""><input class="form-control phoneOrEmail-bg" id="phoneOrEmail" placeholder="手机/电子邮箱"/></div>
+        <div class="input-container"><input type="password" class="form-control pwd4Login-bg" id="pwd4Login" placeholder="密码"/></div>
+        <div id="auto-login">
+            <div class="checkbox" id="remember-me">
+                <label>
+                    <div class="check"></div>
+                    <span class="chinese">自动登录</span>
+                    <span class="english">Remember Me</span>
+                </label>
+            </div>
+            <a id="forget-pwd">
+                <div class="chinese">忘记密码？</div>
+                <div class="english">Forget Password?</div>
+            </a>
+            <div class="clear-both"></div>
+        </div>
+        <div class="redBtn" id="loginBtn">
+            <div class="chinese">登录</div>
+            <div class="english">Log in</div>
+        </div>
+        <div class="split"></div>
+        <div class="switch-container">
+            <div class="regist chinese">还没有账号？<a>注册</a></div>
+            <div class="regist english">Do not have an account? <a>Sign up</a></div>
+            <a class="login-switch chinese">English</a>
+            <a class="login-switch english">中文</a>
+        </div>
+    </div>
+</div>
+<div class="modal" id="registContainerPanel">
+    <div class="close-container"><div class="close">×</div><div class="clearfix"></div></div>
+    <div class="tab-container">
+        <div id="tab-phone" class="tab-title active">
+            <div class="chinese">手机注册</div>
+            <div class="english">Sign up with Phone</div>
+        </div>
+        <div id="tab-email" class="tab-title">
+            <div class="chinese">邮箱注册</div>
+            <div class="english">Sign up with Email</div>
+        </div>
+    </div>
+
+    <div id="tab-phone-panel" class="tab-panel">
+        <div class="input-container"><input class="form-control phoneRegist-bg" id="phoneRegist" placeholder="手机"/></div>
+        <div class="input-container"><input class="form-control lastNamePhone-bg" id="lastNamePhone" placeholder="姓氏"/></div>
+        <div class="input-container"><input class="form-control firstNamePhone-bg" id="firstNamePhone" placeholder="名字"/></div>
+        <div class="input-container"><input class="form-control pwdPhone-bg" id="pwdPhone" placeholder="密码"/></div>
+        <div class="input-container">
+            <input id="verifyCodeValue" class="form-control left"/>
+            <a id="verifyCodeValueBtn" class="right">
+                <span class="chinese">获取动态码</span>
+                <span class="english">Verify Code</span>
+            </a>
+            <div class="clearfix"></div>
+        </div>
+        <div class="serviceRegu">
+            <div class="checkbox">
+                <label>
+                    <div class="check"></div>
+                    <span class="chinese">我已同意UFOffer服务条款</span>
+                    <span class="english">I agree to UFOffer’s Terms and Regulations</span>
+                </label>
+            </div>
+        </div>
+        <div class="redBtn" id="registBtnPhone">
+            <div>注册</div>
+            <div class="english">Sign up</div>
+        </div>
+        <div class="split"></div>
+        <div class="switch-container">
+            <div class="login chinese">已经加入UFOffer？<a>登录</a></div>
+            <div class="login english">Already an UFOffer member? <a>Log in</a></div>
+            <a class="phone-switch chinese">English</a>
+            <a class="phone-switch english">中文</a>
+        </div>
+
+    </div>
+    <div id="tab-email-panel" class="tab-panel">
+        <div class="input-container"><input class="form-control emailRegist-bg" id="emailRegist" placeholder="电子邮箱"/></div>
+        <div class="input-container"><input class="form-control lastNameEmail-bg" id="lastNameEmail" placeholder="姓氏"/></div>
+        <div class="input-container"><input class="form-control firstNameEmail-bg" id="firstNameEmail" placeholder="名字"/></div>
+        <div class="input-container"><input class="form-control pwdEmail-bg" id="pwdEmail" placeholder="密码"/></div>
+        <div class="serviceRegu">
+            <div class="checkbox">
+                <label>
+                    <div class="check"></div>
+                    <span class="chinese">我已同意UFOffer服务条款</span>
+                    <span class="english">I agree to UFOffer’s Terms and Regulations</span>
+                </label>
+            </div>
+        </div>
+        <div class="redBtn" id="registBtnEmail">
+            <div>注册</div>
+            <div class="english">Sign up</div>
+        </div>
+        <div class="split"></div>
+        <div class="switch-container">
+            <div class="login chinese">已经加入UFOffer？<a>登录</a></div>
+            <div class="login english">Already an UFOffer member? <a>Log in</a></div>
+            <a class="email-switch chinese">English</a>
+            <a class="email-switch english">中文</a>
+        </div>
+
+    </div>
+</div>

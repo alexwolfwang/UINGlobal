@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alex.W" />
+    <title>极致文书·大师精神</title>
+    <link rel="stylesheet" type="text/css" href="${req.contextPath}/css/fiveAdvantages.css">
+</head>
+#parse("header.vm")
+<body>
+<div class="documentMaster" id="bodyFlowContainer">
+    <div class="introduction">
+        <div class="container">
+            <div class="title">极致文书·大师精神</div>
+            <p>一份好的申请文书，往往决定了最终录取结果。在UIN，
+                每一份文书视角、专业性、以及语言都由世界顶级名校
+                在职教师顾问打磨到极致。
+            </p>
+        </div>
+    </div>
+    <div class="main">
+        <ul class="split-section col-xs-12 nopadding">
+            <li class="section1">
+                <div class="container">
+                    <div class="left col-xs-6">
+                        <div class="text-column">
+                            <p class="subTitle">UIN提供的极致文书好在哪儿？
+                            <div class="icon">
+                                <img src="${req.contextPath}/resources/fiveAdvantages/documentMaster/1g.png">
+                            </div>
+                            </p>
+                            <p>顶级名校内部顾问撰书定稿。</p>
+                            <p>Native英语，精确表达，文法错误零容忍。</p>
+                            <p>与你同专业教师撰书完美展现专业理解。</p>
+                            <p>顶级名校招生官组成文书审核委员会。</p>
+                            <p>百年传承大师精神，专注于每一份文书。</p>
+                        </div>
+                    </div>
+                    <div class="right col-xs-6">
+                        <img src="${req.contextPath}/resources/fiveAdvantages/documentMaster/pink.png">
+                    </div>
+                </div>
+            </li>
+            <li class="section2 col-xs-12">
+                <div class="container">
+                    <div class="right col-xs-6">
+                        <div class="text-column">
+                            <p class="subTitle">在UIN，一份打磨至极致的文书是如何产生的？
+                            <div class="icon">
+                                <img src="${req.contextPath}/resources/fiveAdvantages/documentMaster/2g.png">
+                            </div>
+                            </p>
+                            <p>1. 选择与你专业贴合度最高的名校内部顾问</p>
+                            <p>2. 一对一深度挖掘你的潜力</p>
+                            <p>3. 内部教师顾问量身定制申请策略</p>
+                            <p>4. 教师顾问根据专业理解打造文书</p>
+                            <p>5. 文书审核委员会进行审核</p>
+                            <p>6. 最终定稿，上传文书至云端。</p>
+                        </div>
+                    </div>
+                    <div class="left col-xs-6">
+                        <div class="img2Out">
+                            <img src="${req.contextPath}/resources/fiveAdvantages/documentMaster/doc100.png">
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="consultantPhoto col-xs-12">
+        <div class="container">
+            <p class='chi'>顾问委员会</p>
+            <p class='eng'>Consultants Committee</p>
+        </div>
+    </div>
+    <div class="bottom col-xs-12">
+        <div class="container">
+            <p>现在就开始留学之路</p>
+            <ul class="nopadding">
+                <li>
+                    <a class="btn btn-lg" href="http://ufoffer.com/ufoffer/getStudyPlan.do">选校定位</a>
+                </li>
+                <li>
+                    <a class="btn btn-lg" href="http://ufoffer.com/ufoffer/consultantQuery.do?country=&academy=&academyLabel=&major=">寻找教师顾问</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    #parse("footer-parts.vm")
+    <script type="text/javascript" src="${req.contextPath}/js/documentMaster.js"></script>
+
+</body>

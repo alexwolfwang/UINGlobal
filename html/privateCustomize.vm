@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alex.W" />
+    <title>私人定制 · 留学札记</title>
+    <link rel="stylesheet" type="text/css" href="${req.contextPath}/css/fiveAdvantages.css">
+</head>
+#parse("header.vm")
+<body>
+<div class="privateCustomize" id="bodyFlowContainer">
+<div class="introduction">
+    <div class="container">
+        <div class="title">私人定制 · 留学札记</div>
+        <p>在UIN，有多少位申请者，就有多少本留学札记。</p>
+        <p>留学是人生的精彩旅程，更是非凡成就。UIN给你绝佳申请服务体验的同时，记录着你</p>
+    </div>
+</div>
+<div class="main">
+    <ul class="split-section col-xs-12 nopadding">
+        <li class="section1">
+            <div class="container">
+                <div class="left col-xs-6">
+                    <div class="text-column">
+                        <p class="subTitle">记录你的成功之路
+                        <div class="icon">
+                            <img src="${req.contextPath}/resources/fiveAdvantages/privateCustomize/1g.png">
+                        </div>
+                        </p>
+                        <p>从你下定决心选择留学，</p>
+                        <p>到你收获Dream School的offer，</p>
+                        <p>你的兴趣、你的付出、你的收获，</p>
+                        <p>留学札记都记得。</p>
+                        <p>而我们，</p>
+                        <p>始终专注于每一位用户的成功与最佳体验。</p>
+                    </div>
+                </div>
+                <div class="right col-xs-6">
+                    <img src="${req.contextPath}/resources/fiveAdvantages/privateCustomize/advantages.png">
+                </div>
+            </div>
+        </li>
+        <li class="section2 col-xs-12">
+            <div class="container">
+                <div class="right col-xs-6">
+                    <div class="text-column">
+                        <p class="subTitle">最全的留学清单
+                        <div class="icon">
+                            <img src="${req.contextPath}/resources/fiveAdvantages/privateCustomize/2g.png">
+                        </div>
+                        </p>
+                        <p>准备动身大洋彼岸，</p>
+                        <p>学习、生活，都充斥着陌生感。</p>
+                        <p>翻开属于你的那一本留学札记，</p>
+                        <p>一定会被留学清单的细致程度吓一跳。</p>
+                        <p>不再有焦虑，</p>
+                        <p>一切从容应对。</p></div>
+                </div>
+                <div class="left col-xs-6">
+                    <img src="${req.contextPath}/resources/fiveAdvantages/privateCustomize/bag.png">
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="bottom col-xs-12">
+    <div class="container">
+        <p>现在就开始留学之路</p>
+        <ul class="nopadding">
+            <li>
+                <a class="btn btn-lg" href="http://ufoffer.com/ufoffer/getStudyPlan.do">选校定位</a>
+            </li>
+            <li>
+                <a class="btn btn-lg" href="http://ufoffer.com/ufoffer/consultantQuery.do?country=&academy=&academyLabel=&major=">寻找教师顾问</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+#parse("footer-parts.vm")
+<script type="text/javascript" src="${req.contextPath}/js/privateCustomize.js"></script>
+</body>

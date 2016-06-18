@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+.title-img { width:100%}
+
+.title-container { position:relative;margin-bottom: 100px;}
+.title-content { position: absolute;width:100%;top:45%;margin-top: -120px}
+.title-content .title-icon{ margin-bottom: 2%;width:100px;}
+.title-content .title{ color: #fff;font-size:48px;}
+.title-content .split{ height:1px;background-color: #ececec;margin-top:2%;margin-bottom:2%;}
+.title-content .sub-title{ color: #ececec;font-size: 20px;}
+.title-container .arrow-container{ position: absolute;top:50%;margin-top: -28px;right:10%;}
+.arrow-container .arrow { display:block;float:right;padding-top:18px;padding-left:18px;margin-left:20px;width:56px;height:56px;border:2px solid #d2d5db;transition: all 500ms cubic-bezier(0.215, 0.61, 0.215, 1) 0s;}
+.arrow-container .arrow:hover { border:2px solid #f06563;transition: all 500ms cubic-bezier(0.215, 0.61, 0.215, 1) 0s;}
+#arrow-right , #arrow-left , #arrow-bottom { width:20px;height:20px; }
+#arrow-left { background-position: 20px 0;}
+#arrow-bottom-action { display:block;padding-top:18px;padding-left:18px;margin-left:auto;margin-right:auto;margin-bottom:20px;width:56px;height:56px;border:2px solid #d2d5db;transition: all 500ms cubic-bezier(0.215, 0.61, 0.215, 1) 0s;}
+#apply-action-bg:hover #arrow-bottom-action { background-color: #fff;border-color: #fff;}
+#apply-action-bg{ cursor: pointer}
+
+.feature .index , .feature .apply { position:relative;height: 250px; }
+/*.feature { padding-bottom: 50px;}*/
+.feature .line { position:absolute;right:50px;top:40px;bottom:0;width:1px;height: 260px;border-right:1px solid #f06563 }
+.feature .index-num { position:absolute;right:31px;width:40px;text-align: center;line-height: 40px;}
+.feature .index-num img { position:absolute;width:40px;left:0;}
+.feature .title { font-size: 24px;border-bottom:1px solid #c9c9c9;padding-bottom: 15px;margin-bottom:30px;color:#040000;}
+.feature .title img { width:40px;margin-right: 10px;}
+.feature .content { padding-left:50px;font-size: 16px;line-height: 36px;color:#7c7c7c}
+.apply { margin-bottom: 62px;}
+
+.apply .line { position:absolute;right:50px;top:0;width:1px;height: 15px;border-right:1px solid #f06563 }
+.apply .line-h { position:absolute;right:0;top:15px;width:51px;height: 1px;border-top:1px solid #f06563 }
+.apply .title { padding-left:50px;font-size: 19px;padding-bottom: 30px;color:black}
+.apply .split { margin-left: 50px;height:1px;border-top:1px solid #c9c9c9;padding-top:45px;margin-bottom:36px;text-align: center;}
+.apply .title .line { position:absolute;left:0;top:15px;width:40px;height:1px;border-top:1px solid #f06563}
+
+.apply-type { float: left; font-size: 12px;}
+.apply-type .img { width: 17%; text-align: left; padding-left: 10px;}
+.apply-type div {text-align: left;}
+/*.apply-type img { width:60px;}*/
+.apply-types { left: -20px }
+.apply .content { padding-bottom: 64px}
+.apply .content div { display: inline;}
+.apply .col-sm-10 {  padding-bottom: 24px;}
+.apply .col-sm-6,.col-sm-3 { padding-left: 0; font-size: 14px; text-align: left}
+.apply .content .col-sm-9 { padding-top: 30px}
+/*.apply .content img { width: 100px }*/
+
+
+.apply .consultant { position: relative; padding-left: 50px; top: 70px; padding-bottom: 50px}
+/*study-plan*********/
+.study-plan .feature { padding-bottom: 50px;}
+.apply .plan-type { padding-left: 0}
+.apply .split { margin-left: 50px;height:1px;border-top:1px solid #c9c9c9;padding-top:45px;margin-bottom:36px;text-align: center;}
+.apply .study-plan .img { display: block; padding-left: 50px}
+
+.time-line { position: relative; padding-top:50px;padding-bottom:50px;background-color: #ee7f63;text-align: center;color: #fff}
+.time-line .time-item{ float: left; margin-right: 15px; font-size: 17px}
+.time-line .time-item img{ width: 180px; padding-bottom: 26px;}
+.action-arrow { position:absolute;bottom:0;right:10%;}
+
+/*.consultantBooking*/
+.consultantBooking .apply-types { left: 0;}
+
+/*background-improving*/
+.background-improving { background-color: #00a4b9;}
+.time-line .time-item .title { font-size: 28px; text-align: left; padding-bottom: 20px}
+.time-line .time-item .content { font-size: 18px; opacity: 0.7}
+
+/*0.4*/
+.apply-part { width: 200px; }
+.apply-part .img { width: 100px;}
+.apply-part .part { padding-top: 30px}
+.document .time-line { background-color: #7a5529; margin-top: -30px;}
+
+/*0.5*/
+.apply-part .part { padding-top: 15px;}
+.apply .col-sm-4 { margin-bottom: 15px;}
+.adviser .time-line { background-color: #64b3d4; margin-top: -30px;}
+
+/*0.6*/
+.tutor .apply .col-sm-12 { padding-left: 10px;}
+.tutor .time-line { background-color: #f5be19; margin-top: -30px;}
+
